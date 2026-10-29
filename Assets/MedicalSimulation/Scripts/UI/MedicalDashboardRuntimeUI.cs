@@ -57,6 +57,8 @@ namespace MedicalSimulation.UI
             OrganInteractable.OnOrganSelected += HandleOrganSelected;
             OrganInteractable.OnOrganDeselected += HandleOrganDeselected;
 
+            MedicalAIChatUI.EnsureInstance();
+
             RefreshStatistics();
         }
 
@@ -123,6 +125,11 @@ namespace MedicalSimulation.UI
                 new Vector2(0.45f, 0f), new Vector2(0.75f, 1f),
                 Vector2.zero, Vector2.zero,
                 14, TextAlignmentOptions.MidlineCenter, new Color(0.6f, 0.85f, 0.95f));
+
+            // AI Assistant Button
+            CreateUIButton("Btn_AIAssistant", headerGo.transform, "<color=#00E5FF>AI ASSISTANT</color>",
+                new Vector2(0.76f, 0.15f), new Vector2(0.86f, 0.85f),
+                () => MedicalAIChatUI.EnsureInstance().TogglePanel());
 
             // Home / Menu Button
             CreateUIButton("Btn_Home", headerGo.transform, "Main Menu",

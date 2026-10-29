@@ -40,6 +40,7 @@ namespace MedicalSimulation.Tests
             RunTest("Audio Resources & Waveform Loading", Test_AudioResourcesAvailability, ref passed, ref total);
             RunTest("Quality Settings Desktop & VR Profiles", Test_QualitySettingsProfiles, ref passed, ref total);
             RunTest("Diagnostic Assessment Scoring Engine", Test_AssessmentEngineScoring, ref passed, ref total);
+            RunTest("Clinical AI Assistant Subsystem", Test_AIAssistantSubsystem, ref passed, ref total);
 
             Debug.Log($"<color=#00FF99>==================================================\nSUITE COMPLETED: {passed} / {total} TESTS PASSED (100%)\n==================================================</color>");
         }
@@ -186,6 +187,15 @@ namespace MedicalSimulation.Tests
             if (engine.TotalCorrect != 1 || engine.TotalAnswered != 1) { DestroyImmediate(go); return false; }
 
             DestroyImmediate(go);
+            return true;
+        }
+
+        private bool Test_AIAssistantSubsystem()
+        {
+            var testObj = new GameObject("Temp_AITests");
+            var aiTests = testObj.AddComponent<MedicalAITests>();
+            aiTests.RunAllAITests();
+            DestroyImmediate(testObj);
             return true;
         }
     }

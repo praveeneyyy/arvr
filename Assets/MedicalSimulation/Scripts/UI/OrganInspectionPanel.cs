@@ -40,6 +40,7 @@ namespace MedicalSimulation.UI
         [SerializeField] private Button toggleLabelsButton;
         [SerializeField] private Slider transparencySlider;
         [SerializeField] private Button restoreButton;
+        [SerializeField] private Button askAiButton;
 
         [Header("References")]
         [SerializeField] private AnatomyModelController anatomyController;
@@ -67,6 +68,7 @@ namespace MedicalSimulation.UI
             showNeighboursButton?.onClick.AddListener(OnShowNeighbours);
             toggleLabelsButton?.onClick.AddListener(() => anatomyController?.ToggleLabels());
             restoreButton?.onClick.AddListener(OnRestore);
+            askAiButton?.onClick.AddListener(OnAskAI);
             transparencySlider?.onValueChanged.AddListener(OnTransparencyChanged);
 
             Hide();
@@ -186,6 +188,15 @@ namespace MedicalSimulation.UI
         private void OnRestore()
         {
             anatomyController?.RestoreFromIsolation();
+        }
+
+        private void OnAskAI()
+        {
+            if (_currentMetadata != null)
+            {
+                var chatUI = MedicalAIChatUI.EnsureInstance();
+                chatUI.SubmitQuickPrompt($"Explain the physiological mechanics and clinical pathology of the {_currentMetadata.anatomicalName}.");
+            }
         }
 
         private void OnTransparencyChanged(float value)

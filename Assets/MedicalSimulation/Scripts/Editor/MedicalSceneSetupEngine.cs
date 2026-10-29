@@ -17,6 +17,24 @@ namespace MedicalSimulation.Core
     public static class MedicalSceneSetupEngine
     {
 #if UNITY_EDITOR
+        [MenuItem("MedicalSimulation/Add AI Assistant to Active Scene")]
+        public static void AddAIAssistantToActiveScene()
+        {
+            if (Object.FindFirstObjectByType<AI.MedicalAIOrchestrator>() == null)
+            {
+                var aiGo = new GameObject("MedicalAI_Assistant");
+                aiGo.AddComponent<AI.MedicalAIOrchestrator>();
+                aiGo.AddComponent<UI.MedicalAIChatUI>();
+                aiGo.AddComponent<UI.MedicalAIChatController>();
+                Undo.RegisterCreatedObjectUndo(aiGo, "Add Medical AI Assistant");
+                Debug.Log("<color=#00FF99>[MedicalSceneSetupEngine] Added Medical AI Assistant to the active scene.</color>");
+            }
+            else
+            {
+                Debug.LogWarning("[MedicalSceneSetupEngine] Medical AI Assistant already exists in this scene.");
+            }
+        }
+
         [MenuItem("MedicalSimulation/Setup and Build Dedicated Laboratory Scenes")]
         public static void BuildAllDedicatedScenes()
         {
@@ -60,6 +78,12 @@ namespace MedicalSimulation.Core
             // 5. Scene Bootstrap
             var bootGo = new GameObject("SceneBootstrap");
             var boot = bootGo.AddComponent<SceneBootstrap>();
+
+            // 6. AI Assistant Orchestrator & UI
+            var aiGo = new GameObject("MedicalAI_Assistant");
+            aiGo.AddComponent<AI.MedicalAIOrchestrator>();
+            aiGo.AddComponent<UI.MedicalAIChatUI>();
+            aiGo.AddComponent<UI.MedicalAIChatController>();
 
             // Adjust Camera
             var cam = Camera.main;
