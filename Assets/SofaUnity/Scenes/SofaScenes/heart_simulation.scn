@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<Node name="root" dt="0.02" gravity="0 -9.81 0">
+    <RequiredPlugin name="Sofa.Component.Collision.Detection.Algorithm"/>
+    <RequiredPlugin name="Sofa.Component.Collision.Detection.Intersection"/>
+    <RequiredPlugin name="Sofa.Component.Collision.Geometry"/>
+    <RequiredPlugin name="Sofa.Component.Collision.Response.Contact"/>
+    <RequiredPlugin name="Sofa.Component.Constraint.Projective"/>
+    <RequiredPlugin name="Sofa.Component.Engine.Select"/>
+    <RequiredPlugin name="Sofa.Component.IO.Mesh"/>
+    <RequiredPlugin name="Sofa.Component.LinearSolver.Iterative"/>
+    <RequiredPlugin name="Sofa.Component.Mapping.Linear"/>
+    <RequiredPlugin name="Sofa.Component.Mass"/>
+    <RequiredPlugin name="Sofa.Component.ODESolver.Backward"/>
+    <RequiredPlugin name="Sofa.Component.SolidMechanics.Spring"/>
+    <RequiredPlugin name="Sofa.Component.StateContainer"/>
+    <RequiredPlugin name="Sofa.Component.Topology.Container.Dynamic"/>
+    <RequiredPlugin name="Sofa.Component.Visual"/>
+    <RequiredPlugin name="Sofa.GL.Component.Rendering3D"/>
+    
+    <VisualStyle displayFlags="showVisual showBehaviorModels" />
+    <DefaultAnimationLoop />
+    <DefaultVisualManagerLoop />
+    
+    <DefaultPipeline depth="6" verbose="0" draw="0" />
+    <BruteForceBroadPhase/>
+    <BVHNarrowPhase/>
+    <MinProximityIntersection name="Proximity" alarmDistance="0.5" contactDistance="0.3" />
+    <DefaultContactManager name="Response" response="PenalityContactForceField" />
+
+    <Node name="Heart_Myocardium">
+        <EulerImplicitSolver name="cg_odesolver" rayleighStiffness="0.1" rayleighMass="0.1" />
+        <CGLinearSolver iterations="25" name="linear solver" tolerance="1.0e-9" threshold="1.0e-9" />
+        
+        <MeshOBJLoader name="loader" filename="mesh/heart.obj" />
+        <MeshTopology src="@loader" />
+        <MechanicalObject src="@loader" name="mechObject" scale3d="1 1 1" rotation="0 0 0" />
+        
+        <UniformMass totalMass="0.35" />
+        
+        <BoxROI template="Vec3d" box="-5 -5 -5 5 5 5" drawBoxes="0" name="FixedROI" />
+        <FixedConstraint indices="@FixedROI.indices" />
+        
+        <MeshSpringForceField name="Springs" stiffness="1500" damping="8" />
+        
+        <TriangleCollisionModel />
+        <LineCollisionModel />
+        <PointCollisionModel />
+        
+        <Node name="Heart_MyocardiumVisual">
+            <OglModel name="Visual" color="0.75 0.10 0.12 1.0" />
+            <IdentityMapping input="@../mechObject" output="@Visual" />
+        </Node>
+    </Node>
+</Node>

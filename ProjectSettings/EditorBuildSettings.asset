@@ -9,14 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/1.unity
     guid: cf9fb52ed4baccb4987ac2c5fc91b680
   - enabled: 1
-    path: Assets/Scenes/1 1.unity
-    guid: 00000000000000000000000000000000
+    path: Assets/Scenes/04_AnatomyLab.unity
+    guid: e55b17c1327e46c09193fef453f6d126
   - enabled: 1
-    path: Assets/Scenes/1 2.unity
-    guid: 00000000000000000000000000000000
+    path: Assets/Scenes/06_ProcedureLab.unity
+    guid: 0fc390a26ed44f1abd62ddea90bd1928
   - enabled: 1
-    path: Assets/Scenes/collector.unity
-    guid: 00000000000000000000000000000000
+    path: Assets/Scenes/05_DiagnosisLab.unity
+    guid: 442bdb5e8a5f4b63b24f9f7b4db971d3
+  - enabled: 1
+    path: Assets/Scenes/07_FinalAssessment.unity
+    guid: 6af6cc019fe64c549ccf31d26d6a6e00
   - enabled: 1
     path: Assets/Scenes/heart.unity
     guid: 4e9fef26e6adb88479ad1b9834a32d94
@@ -36,19 +39,7 @@ EditorBuildSettings:
     path: Assets/Scenes/nasal.unity
     guid: 2368e47ce62c37b48acfce703eee7599
   - enabled: 1
-    path: Assets/Scenes/heart 1.unity
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/heart 2.unity
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Bloodflow 1.unity
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Bloodflow 2.unity
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/nasal 1.unity
+    path: Assets/Scenes/collector.unity
     guid: 00000000000000000000000000000000
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}

@@ -17,12 +17,13 @@ namespace MedicalSimulation.Core
         [SerializeField] private int anatomyLabSceneIndex = 1;
         [SerializeField] private int procedureLabSceneIndex = 2;
         [SerializeField] private int diagnosisLabSceneIndex = 3;
-        [SerializeField] private int heartSceneIndex = 4;
-        [SerializeField] private int bloodflowSceneIndex = 5;
-        [SerializeField] private int teethSceneIndex = 6;
-        [SerializeField] private int liverCutSceneIndex = 7;
-        [SerializeField] private int liverGrabSceneIndex = 8;
-        [SerializeField] private int nasalSceneIndex = 9;
+        [SerializeField] private int finalAssessmentSceneIndex = 4;
+        [SerializeField] private int heartSceneIndex = 5;
+        [SerializeField] private int bloodflowSceneIndex = 6;
+        [SerializeField] private int teethSceneIndex = 7;
+        [SerializeField] private int liverCutSceneIndex = 8;
+        [SerializeField] private int liverGrabSceneIndex = 9;
+        [SerializeField] private int nasalSceneIndex = 10;
 
         // ── Progress tracking ────────────────────────────────────────────────
         public int ModulesCompleted    { get; private set; }
@@ -59,6 +60,7 @@ namespace MedicalSimulation.Core
         public void GoToAnatomyLab()        => LoadScene(anatomyLabSceneIndex);
         public void GoToProcedureLab()      => LoadScene(procedureLabSceneIndex);
         public void GoToDiagnosisLab()      => LoadScene(diagnosisLabSceneIndex);
+        public void GoToFinalAssessment()   => LoadScene(finalAssessmentSceneIndex);
         public void GoToHeartScene()        => LoadScene(heartSceneIndex);
         public void GoToBloodflowScene()    => LoadScene(bloodflowSceneIndex);
         public void GoToTeethScene()        => LoadScene(teethSceneIndex);
