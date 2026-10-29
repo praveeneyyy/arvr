@@ -9,6 +9,7 @@ public class JawController : MonoBehaviour
     
     private float currentRotation = 0f;
     private bool isOpen = false;
+        MedicalSimulation.Audio.MedicalAudioController.Instance?.PlayInstrumentPlace();
     
     void Update()
     {
@@ -23,15 +24,18 @@ public class JawController : MonoBehaviour
     public void ToggleJaw()
     {
         isOpen = !isOpen;
+        MedicalSimulation.Audio.MedicalAudioController.Instance?.PlayInstrumentPlace();
     }
     
     public void OpenJaw()
     {
         isOpen = true;
+        MedicalSimulation.Audio.MedicalAudioController.Instance?.PlayInstrumentPlace();
     }
     
     public void CloseJaw()
     {
         isOpen = false;
+        MedicalSimulation.Audio.MedicalAudioController.Instance?.PlayInstrumentPlace();
     }
 }

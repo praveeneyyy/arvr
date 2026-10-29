@@ -142,9 +142,11 @@ public class ToothExtractionKeyboard : MonoBehaviour
         }
     }
     
+    
     void ExtractTooth()
     {
         isExtracted = true;
+        MedicalSimulation.Dental.DentalProcedureHUDController.OnToothExtractedGlobal?.Invoke();
         
         Vector3 worldPos = transform.position;
         Quaternion worldRot = transform.rotation;

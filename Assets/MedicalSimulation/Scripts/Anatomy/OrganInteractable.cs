@@ -33,6 +33,24 @@ namespace MedicalSimulation.Anatomy
 
         void Awake()
         {
+            if (metadata == null)
+                metadata = AnatomyMetadata.GetFallback(gameObject.name);
+
+            // Ensure there is at least one active collider
+            if (GetComponent<Collider>() == null && GetComponentInChildren<Collider>() == null)
+            {
+                var mf = GetComponent<MeshFilter>();
+                if (mf != null && mf.sharedMesh != null)
+                {
+                    var mc = gameObject.AddComponent<MeshCollider>();
+                    mc.convex = true;
+                }
+                else
+                {
+                    gameObject.AddComponent<BoxCollider>();
+                }
+            }
+
             _renderers = GetComponentsInChildren<Renderer>(true);
             // Cache originals and create per-instance runtime copies
             var origList    = new List<Material>();

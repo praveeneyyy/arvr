@@ -64,6 +64,24 @@ namespace MedicalSimulation.Audio
             DontDestroyOnLoad(gameObject);
 
             EnsureAudioSources();
+            AutoLoadClipsFromResources();
+        }
+
+        private void AutoLoadClipsFromResources()
+        {
+            heartbeatClip         ??= Resources.Load<AudioClip>("MedicalAudio/heartbeat");
+            inhaleClip            ??= Resources.Load<AudioClip>("MedicalAudio/inhale");
+            exhaleClip            ??= Resources.Load<AudioClip>("MedicalAudio/exhale");
+            drillClip             ??= Resources.Load<AudioClip>("MedicalAudio/dental_drill");
+            suctionClip           ??= Resources.Load<AudioClip>("MedicalAudio/dental_suction");
+            scalerClip            ??= Resources.Load<AudioClip>("MedicalAudio/dental_scaler");
+            instrumentPlaceClip   ??= Resources.Load<AudioClip>("MedicalAudio/instrument_place");
+            procedureCompleteClip ??= Resources.Load<AudioClip>("MedicalAudio/procedure_complete");
+            selectClip            ??= Resources.Load<AudioClip>("MedicalAudio/ui_select");
+            buttonClickClip       ??= Resources.Load<AudioClip>("MedicalAudio/ui_select");
+            confirmClip           ??= Resources.Load<AudioClip>("MedicalAudio/ui_confirm");
+            errorClip             ??= Resources.Load<AudioClip>("MedicalAudio/ui_select");
+            labAmbienceClip       ??= Resources.Load<AudioClip>("MedicalAudio/lab_ambience");
         }
 
         void Start()

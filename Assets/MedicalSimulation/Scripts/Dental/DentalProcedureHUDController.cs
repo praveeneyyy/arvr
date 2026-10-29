@@ -66,6 +66,18 @@ namespace MedicalSimulation.Dental
         private DentalInstrument _activeInstrument = DentalInstrument.None;
         private bool             _procedureComplete;
 
+        public static System.Action OnToothExtractedGlobal;
+
+        void OnEnable()
+        {
+            OnToothExtractedGlobal += OnToothExtracted;
+        }
+
+        void OnDisable()
+        {
+            OnToothExtractedGlobal -= OnToothExtracted;
+        }
+
         void Start()
         {
             // Wire step navigation
