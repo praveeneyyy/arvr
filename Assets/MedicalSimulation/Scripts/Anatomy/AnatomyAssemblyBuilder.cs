@@ -230,6 +230,10 @@ namespace MedicalSimulation.Anatomy
 
             var intMeta = intestines.GetComponent<OrganInteractable>() ?? intestines.AddComponent<OrganInteractable>();
             intMeta.metadata = AnatomyMetadata.GetFallback("intestine");
+
+            // Attach peristalsis animation controller
+            var peristalsis = gameObject.GetComponent<DigestivePeristalsisController>() ?? gameObject.AddComponent<DigestivePeristalsisController>();
+            peristalsis.Play();
         }
 
         // ── 4. Urinary System ─────────────────────────────────────────────────
