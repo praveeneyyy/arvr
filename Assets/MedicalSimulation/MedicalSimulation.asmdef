@@ -5,7 +5,9 @@
         "Unity.TextMeshPro",
         "Unity.XR.Interaction.Toolkit",
         "Unity.XR.CoreUtils",
-        "Unity.InputSystem"
+        "Unity.InputSystem",
+        "Unity.XR.ARFoundation",
+        "Unity.XR.ARSubsystems"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
