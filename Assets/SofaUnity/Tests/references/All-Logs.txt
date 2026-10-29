@@ -1,0 +1,604 @@
+
+ [Log] : ############
+ [Log] : Nbr scene in EditorBuildSettings: 30
+ [Log] : Nbr scene counted: 30
+ [Log] : ############
+ [Log] : ####  Load Level: 1/30 -> Example_01_SimpleLiver  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Log] : ####  Close Level: 1/30 -> Example_01_SimpleLiver  ####
+ [Log] : ####  Load Level: 2/30 -> Example_02_Caduceus  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.AnimationLoop has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Lagrangian.Correction has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Lagrangian.Solver has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Constant has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Grid has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Log] : ####  Close Level: 2/30 -> Example_02_Caduceus  ####
+ [Log] : ####  Load Level: 3/30 -> Example_03_SimpleObjectsCollision  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.MechanicalLoad has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.Spring has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Constant has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Mapping has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Warning] : The GUID inside 'Assets/SofaUnity/Core.meta' cannot be extracted by the YAML Parser. Attempting to extract it via string matching instead. Please verify the file does not contain unexpected data.
+ [Log] : ####  Close Level: 3/30 -> Example_03_SimpleObjectsCollision  ####
+ [Log] : ####  Load Level: 4/30 -> Example_04_DeformableObjectsCollision  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.Spring has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Constant has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Grid has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Warning] : # Sofa Warning: InfinyToolkit has already registered its components.
+ [Log] : ####  Close Level: 4/30 -> Example_04_DeformableObjectsCollision  ####
+ [Log] : ####  Load Level: 5/30 -> Example_05_SoftTissue  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.Spring has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Log] : ####  Close Level: 5/30 -> Example_05_SoftTissue  ####
+ [Log] : ####  Load Level: 6/30 -> Example_06_BeamModels  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Lagrangian.Correction has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.Spring has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Log] : ####  Close Level: 6/30 -> Example_06_BeamModels  ####
+ [Log] : ####  Load Level: 7/30 -> Example_07_SPHFluid  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.AnimationLoop has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Lagrangian.Correction has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Lagrangian.Solver has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Engine.Select has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SceneUtility has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.Spring has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Grid has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Log] : ####  Close Level: 7/30 -> Example_07_SPHFluid  ####
+ [Log] : ####  Load Level: 8/30 -> Example_08_SPHFluidParticles  ####
+ [Error] : SofaContext not found in scene: Example_08_SPHFluidParticles
+ [Log] : ####  Close Level: 8/30 -> Example_08_SPHFluidParticles  ####
+ [Log] : ####  Load Level: 9/30 -> Example_09_HeatDiffusion  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : Component: 'DiffusionForceField' under node: 'TetrahedronDiffusionFEMForceField  -  DiffusionForceField' not reconnected to a SOFA component. GameObject will be removed.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Log] : # Sofa Log: Loaded plugin: D:/Unity3D/SofaUnity_v25.06/SofaUnity-URP_Package_v25.06/Assets/SofaUnity/Core/Plugins/Native/x64/Sofa.Component.Diffusion.dll
+ [Warning] : # Sofa Warning: Sofa.Component.Engine.Select has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Grid has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Mapping has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Error] : # Sofa Error: parseSimulationNode found: 'DiffusionForceField' of type: 'TetrahedronDiffusionFEMForceField' -> No API class found!
+ [Log] : ####  Close Level: 9/30 -> Example_09_HeatDiffusion  ####
+ [Log] : ####  Load Level: 10/30 -> Example_10_VonMisesDisplay  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Engine.Select has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.MechanicalLoad has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SceneUtility has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Mapping has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Log] : ####  Close Level: 10/30 -> Example_10_VonMisesDisplay  ####
+ [Log] : ####  Load Level: 11/30 -> Demo_01_LiverInteraction  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Engine.Select has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.MechanicalLoad has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.Spring has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Mapping has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Log] : SofaModel_cut create SofaRayCaster CuttingTool with length: 10 Under Name: SofaModel_cut
+ [Log] : SofaModel_01 create SofaRayCaster AttachTool with length: 1 Under Name: SofaModel_01
+ [Log] : ####  Close Level: 11/30 -> Demo_01_LiverInteraction  ####
+ [Log] : ####  Load Level: 12/30 -> Demo_02_LiverInteraction-HD  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Engine.Select has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.MechanicalLoad has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.Spring has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Mapping has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Log] : SofaModel_cut create SofaRayCaster CuttingTool with length: 10 Under Name: SofaModel_cut
+ [Log] : SofaModel_03 create SofaRayCaster AttachTool with length: 1 Under Name: SofaModel_03
+ [Log] : SofaModel_01 create SofaRayCaster AttachTool with length: 1 Under Name: SofaModel_01
+ [Log] : ####  Close Level: 12/30 -> Demo_02_LiverInteraction-HD  ####
+ [Log] : ####  Load Level: 13/30 -> Demo_03_CubeCarving  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Log] : # Sofa Log: Loaded plugin: D:/Unity3D/SofaUnity_v25.06/SofaUnity-URP_Package_v25.06/Assets/SofaUnity/Core/Plugins/Native/x64/SofaCarving.dll
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Engine.Select has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SceneUtility has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Grid has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Mapping has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Log] : ####  Close Level: 13/30 -> Demo_03_CubeCarving  ####
+ [Log] : ####  Load Level: 14/30 -> Demo_04_CubeAdvancedCarving  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Log] : # Sofa Log: Loaded plugin: D:/Unity3D/SofaUnity_v25.06/SofaUnity-URP_Package_v25.06/Assets/SofaUnity/Core/Plugins/Native/x64/MeshRefinement.dll
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Engine.Select has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.NonLinear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SceneUtility has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Grid has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Mapping has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Warning] : # Sofa Warning: InfinyToolkit has already registered its components.
+ [Warning] : # Sofa Warning: Option carvingWithRefinement require MeshRefienement plugin. Please check https://www.sofa-framework.org/applications/marketplace/cutting-mesh-refinement/ for more information.
+ [Warning] : # Sofa Warning: Option carvingWithRefinement require MeshRefienement plugin. Please check https://www.sofa-framework.org/applications/marketplace/cutting-mesh-refinement/ for more information.
+ [Log] : ####  Close Level: 14/30 -> Demo_04_CubeAdvancedCarving  ####
+ [Log] : ####  Load Level: 15/30 -> Demo_05_LiverCut  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Engine.Select has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.MechanicalLoad has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SceneUtility has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Mapping has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Warning] : # Sofa Warning: Class already registered in the ObjectFactory: MeshCutSurface<Vec3d,Vec3d>
+ [Warning] : # Sofa Warning: Class already registered in the ObjectFactory: TetrahedronCuttingController<Vec3d>
+ [Warning] : # Sofa Warning: Class already registered in the ObjectFactory: TetrahedronRefinementController
+ [Log] : ####  Close Level: 15/30 -> Demo_05_LiverCut  ####
+ [Log] : ####  Load Level: 16/30 -> Demo_06_LiverCut-CUDA  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Engine.Select has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.MechanicalLoad has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SceneUtility has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Mapping has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Warning] : # Sofa Warning: MeshRefinement has already registered its components.
+ [Error] : # Sofa Error: Requested template 'CudaVec3f' cannot be found in the list of available templates [Vec3d]. Falling back to the first compatible template: 'Vec3d'.
+ [Log] : # Sofa Log: init: 5 non-contiguous fixed indices
+ [Error] : # Sofa Error: No BaseMechanicalState found.
+ [Error] : # Sofa Error: No TetrahedronSetGeometryAlgorithms found.
+ [Exception] : InvalidCastException: Specified cast is not valid.
+SofaUnity.SofaFEMForceField.computeVonMisesDisplay () (at Assets/SofaUnity/Core/Scripts/Core/Components/SofaFEMForceField.cs:184)
+SofaUnity.SofaFEMForceField.Init_impl () (at Assets/SofaUnity/Core/Scripts/Core/Components/SofaFEMForceField.cs:113)
+SofaUnity.SofaBase.Start () (at Assets/SofaUnity/Core/Scripts/Core/Base/SofaBase.cs:115)
+
+ [Log] : ####  Close Level: 16/30 -> Demo_06_LiverCut-CUDA  ####
+ [Log] : ####  Load Level: 17/30 -> Demo_07_MeshController  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.AnimationLoop has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Lagrangian.Correction has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Lagrangian.Solver has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Engine.Select has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Direct has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.Spring has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Constant has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Grid has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Mapping has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Warning] : # Sofa Warning: Neither the 'defaultCompliance' nor the 'compliance' data is set, please set one to define your compliance matrix
+ [Log] : ####  Close Level: 17/30 -> Demo_07_MeshController  ####
+ [Log] : ####  Load Level: 18/30 -> Demo_08_MouseTissuePicking  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.Spring has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Log] : Main Camera create SofaRayCaster AttachTool with length: 1000 Under Name: Main Camera
+ [Log] : StartRay
+ [Log] : ####  Close Level: 18/30 -> Demo_08_MouseTissuePicking  ####
+ [Log] : ####  Load Level: 19/30 -> LiverPyhon  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : SofaDAGNodeManager Error while reconnecting the graph: 4 DAGNode found in Unity instead of : 1 from SOFA side.
+ [Warning] : Component: 'VisualStyle' under node: 'VisualStyle  -  VisualStyle' not reconnected to a SOFA component. GameObject will be removed.
+ [Warning] : Component: 'LiverSurface' under node: 'MeshOBJLoader  -  LiverSurface' not reconnected to a SOFA component. GameObject will be removed.
+ [Warning] : Unity DAG Node not reconnected. Will remove it: Liver@Surf
+ [Warning] : Unity DAG Node not reconnected. Will remove it: Liver@Visu
+ [Warning] : Unity DAG Node not reconnected. Will remove it: root@Liver
+ [Log] : # Sofa Log: Initializing with python version 3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]
+ [Log] : # Sofa Log: Registering a scene loader for [.py, .py3, .pyscn, .py3scn] files.
+ [Log] : # Sofa Log: Initializing python
+ [Log] : # Sofa Log: Loaded plugin: D:/Unity3D/SofaUnity_v25.06/SofaUnity-URP_Package_v25.06/Assets/SofaUnity/Core/Plugins/Native/x64/SofaPython3.dll
+ [Error] : # Sofa Error: Unable to completely load the scene from file 'D:/Unity3D/SofaUnity_v25.06/SofaUnity-URP_Package_v25.06/Assets/SofaUnity/Scenes/SofaScenes/liver.py'.  
+Python exception:   
+  ModuleNotFoundError: No module named 'Sofa'
+ [Warning] : # Sofa Warning: An animation loop is required, but has not been found. Add an animation loop in the root of your scene to fix this warning. The list of available animation loop components is: [AnimationLoopParallelScheduler, ConstraintAnimationLoop, DefaultAnimationLoop, FreeMotionAnimationLoop, MultiStepAnimationLoop, MultiTagAnimationLoop]. A component of type DefaultAnimationLoop will be automatically added for you.
+ [Log] : ####  Close Level: 19/30 -> LiverPyhon  ####
+ [Log] : ####  Load Level: 20/30 -> LiverPyhonController  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : SofaDAGNodeManager Error while reconnecting the graph: 4 DAGNode found in Unity instead of : 1 from SOFA side.
+ [Warning] : Component: 'VisualStyle' under node: 'VisualStyle  -  VisualStyle' not reconnected to a SOFA component. GameObject will be removed.
+ [Warning] : Component: 'LiverSurface' under node: 'MeshOBJLoader  -  LiverSurface' not reconnected to a SOFA component. GameObject will be removed.
+ [Warning] : Unity DAG Node not reconnected. Will remove it: root@Liver
+ [Warning] : Unity DAG Node not reconnected. Will remove it: Liver@Visu
+ [Exception] : MissingReferenceException: The object of type 'SofaUnity.SofaVisualModel' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <435b7303fa1046c7aefb885a0b7d525b>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <435b7303fa1046c7aefb885a0b7d525b>:0)
+UnityEngine.Component.get_gameObject () (at <435b7303fa1046c7aefb885a0b7d525b>:0)
+SofaUnity.SofaBaseComponent.DestroyComponent (System.Boolean killGameObject) (at Assets/SofaUnity/Core/Scripts/Core/Base/SofaBaseComponent.cs:120)
+SofaUnity.SofaDAGNode.DestroyDAGNode (System.Boolean killGameObject) (at Assets/SofaUnity/Core/Scripts/Core/DAGNode/SofaDAGNode.cs:189)
+SofaUnity.SofaDAGNodeManager.RepairDAGNodeGraph () (at Assets/SofaUnity/Core/Scripts/Core/DAGNode/SofaDAGNodeManager.cs:501)
+SofaUnity.SofaDAGNodeManager.ReconnectNodeGraph () (at Assets/SofaUnity/Core/Scripts/Core/DAGNode/SofaDAGNodeManager.cs:181)
+SofaUnity.SofaContext.ReconnectSofaScene () (at Assets/SofaUnity/Core/Scripts/SofaContext.cs:645)
+SofaUnity.SofaContext.Init () (at Assets/SofaUnity/Core/Scripts/SofaContext.cs:429)
+SofaUnity.SofaContext.StartSofa () (at Assets/SofaUnity/Core/Scripts/SofaContext.cs:327)
+SofaUnity.SofaContext.Awake () (at Assets/SofaUnity/Core/Scripts/SofaContext.cs:260)
+
+ [Log] : ####  Close Level: 20/30 -> LiverPyhonController  ####
+ [Error] : # Sofa Error: Unable to completely load the scene from file 'D:/Unity3D/SofaUnity_v25.06/SofaUnity-URP_Package_v25.06/Assets/SofaUnity/Scenes/SofaScenes/liver_interaction.py'.  
+Python exception:   
+  ModuleNotFoundError: No module named 'Sofa'
+ [Warning] : # Sofa Warning: An animation loop is required, but has not been found. Add an animation loop in the root of your scene to fix this warning. The list of available animation loop components is: [AnimationLoopParallelScheduler, ConstraintAnimationLoop, DefaultAnimationLoop, FreeMotionAnimationLoop, MultiStepAnimationLoop, MultiTagAnimationLoop]. A component of type DefaultAnimationLoop will be automatically added for you.
+ [Log] : ####  Load Level: 21/30 -> Demo_01_TearingGravity  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: TearingEngine: Implicit object registration is deprecated since v24.12. Check #4429 for more information.
+ [Warning] : # Sofa Warning: TearingScenarioEngine: Implicit object registration is deprecated since v24.12. Check #4429 for more information.
+ [Warning] : # Sofa Warning: VolumeTearingEngine: Implicit object registration is deprecated since v24.12. Check #4429 for more information.
+ [Log] : # Sofa Log: Loaded plugin: D:/Unity3D/SofaUnity_v25.06/SofaUnity-URP_Package_v25.06/Assets/SofaUnity/Core/Plugins/Native/x64/Tearing.dll
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Engine.Select has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SceneUtility has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.Spring has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Log] : ####  Close Level: 21/30 -> Demo_01_TearingGravity  ####
+ [Log] : ####  Load Level: 22/30 -> Demo_02_TearingInteraction  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Engine.Select has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SceneUtility has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.Spring has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Log] : Main Camera create SofaRayCaster AttachTool with length: 1000 Under Name: Main Camera
+ [Log] : StartRay
+ [Log] : ####  Close Level: 22/30 -> Demo_02_TearingInteraction  ####
+ [Log] : ####  Load Level: 23/30 -> Capsule_simulation_constraint  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Neither the 'defaultCompliance' nor the 'compliance' data is set, please set one to define your compliance matrix
+ [Warning] : # Sofa Warning: Neither the 'defaultCompliance' nor the 'compliance' data is set, please set one to define your compliance matrix
+ [Log] : ####  Close Level: 23/30 -> Capsule_simulation_constraint  ####
+ [Log] : ####  Load Level: 24/30 -> Capsule_simulation_final  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Log] : ####  Close Level: 24/30 -> Capsule_simulation_final  ####
+ [Log] : ####  Load Level: 25/30 -> Capsule_simulation_narrow_path  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Engine.Select has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Iterative has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mass has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.FEM.Elastic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Grid has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Mapping has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Log] : ####  Close Level: 25/30 -> Capsule_simulation_narrow_path  ####
+ [Log] : ####  Load Level: 26/30 -> Capsule_simulation_narrow_path_constraint  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Log] : ####  Close Level: 26/30 -> Capsule_simulation_narrow_path_constraint  ####
+ [Log] : ####  Load Level: 27/30 -> BeamDemo_01_Texture  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.AnimationLoop has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Lagrangian.Correction has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Lagrangian.Solver has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Direct has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.Spring has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Grid has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: BeamAdapter has already registered its components.
+ [Log] : ####  Close Level: 27/30 -> BeamDemo_01_Texture  ####
+ [Log] : ####  Load Level: 28/30 -> BeamDemo_02_KV1  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.AnimationLoop has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Lagrangian.Correction has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Lagrangian.Solver has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Direct has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SceneUtility has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.Spring has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Constant has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Grid has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Warning] : # Sofa Warning: BeamAdapter has already registered its components.
+ [Log] : ####  Close Level: 28/30 -> BeamDemo_02_KV1  ####
+ [Log] : ####  Load Level: 29/30 -> BeamDemo_03_Ureteroscopy  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : # Sofa Warning: Sofa.Component.AnimationLoop has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Lagrangian.Correction has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Lagrangian.Solver has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Direct has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SceneUtility has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.Spring has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Constant has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Grid has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: BeamAdapter has already registered its components.
+ [Log] : ####  Close Level: 29/30 -> BeamDemo_03_Ureteroscopy  ####
+ [Log] : ####  Load Level: 30/30 -> BeamDemo_04_3instruments  ####
+ [Log] : No license detected. SofaContextAPI will use the free version of the integration.
+ [Warning] : SofaMeshTopology::ComputeMeshFromQuad() method not yet implemented!
+ [Warning] : SofaMeshTopology::ComputeMeshFromQuad() method not yet implemented!
+ [Warning] : SofaMeshTopology::ComputeMeshFromQuad() method not yet implemented!
+ [Warning] : # Sofa Warning: BeamAdapter has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.AnimationLoop has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Algorithm has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Detection.Intersection has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Geometry has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Collision.Response.Contact has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Lagrangian.Correction has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Lagrangian.Solver has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Constraint.Projective has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.IO.Mesh has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.LinearSolver.Direct has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Mapping.Linear has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.ODESolver.Backward has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.SolidMechanics.Spring has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.StateContainer has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Constant has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Dynamic has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Container.Grid has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Topology.Mapping has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.Component.Visual has already registered its components.
+ [Warning] : # Sofa Warning: Sofa.GL.Component.Rendering3D has already registered its components.
+ [Warning] : # Sofa Warning: No convergence in unbuilt nlcp gaussseidel function : error =0.0074059 after 1000 iterations
+ [Warning] : # Sofa Warning: No convergence in unbuilt nlcp gaussseidel function : error =0.00524187 after 1000 iterations
+ [Warning] : # Sofa Warning: No convergence in unbuilt nlcp gaussseidel function : error =0.00400183 after 1000 iterations
+ [Warning] : # Sofa Warning: No convergence in unbuilt nlcp gaussseidel function : error =0.0056339 after 1000 iterations
+ [Warning] : # Sofa Warning: No convergence in unbuilt nlcp gaussseidel function : error =0.00441539 after 1000 iterations

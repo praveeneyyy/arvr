@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<Node name="root" dt="0.05" showBoundingTree="0" gravity="0 -9.8 0">
+    <RequiredPlugin name="Sofa.Component.Collision.Detection.Algorithm"/>
+    <RequiredPlugin name="Sofa.Component.Collision.Detection.Intersection"/>
+    <RequiredPlugin name="Sofa.Component.Collision.Geometry"/>
+    <RequiredPlugin name="Sofa.Component.Collision.Response.Contact"/>
+    <RequiredPlugin name="Sofa.Component.Constraint.Projective"/>
+    <RequiredPlugin name="Sofa.Component.Engine.Select"/>
+    <RequiredPlugin name="Sofa.Component.IO.Mesh"/>
+    <RequiredPlugin name="Sofa.Component.LinearSolver.Iterative"/>
+    <RequiredPlugin name="Sofa.Component.Mapping.Linear"/>
+    <RequiredPlugin name="Sofa.Component.Mass"/>
+    <RequiredPlugin name="Sofa.Component.MechanicalLoad"/>
+    <RequiredPlugin name="Sofa.Component.ODESolver.Backward"/>
+    <RequiredPlugin name="Sofa.Component.SolidMechanics.FEM.Elastic"/>
+    <RequiredPlugin name="Sofa.Component.SolidMechanics.Spring"/>
+    <RequiredPlugin name="Sofa.Component.StateContainer"/>
+    <RequiredPlugin name="Sofa.Component.Topology.Container.Dynamic"/>
+    <RequiredPlugin name="Sofa.Component.Topology.Mapping"/>
+    <RequiredPlugin name="Sofa.Component.Visual"/>
+    <RequiredPlugin name="Sofa.GL.Component.Rendering3D"/>
+    <VisualStyle displayFlags="showVisual" />
+    
+    <DefaultAnimationLoop />
+    <DefaultVisualManagerLoop />
+    
+    <DefaultPipeline verbose="0" />
+    <BruteForceBroadPhase/>
+    <BVHNarrowPhase/>
+    <DefaultContactManager response="PenalityContactForceField" />
+    <MinProximityIntersection name="Proximity" alarmDistance="0.8" contactDistance="0.5" />
+
+    <Node name="NasalVolume">
+        <EulerImplicitSolver name="cg_odesolver" printLog="false" rayleighStiffness="0.1" rayleighMass="0.1" />
+        <CGLinearSolver iterations="25" name="linear solver" tolerance="1.0e-9" threshold="1.0e-9" />
+        <MeshGmshLoader name="loader" filename="C:/Users/hp/AHHHHHH - Copy/Assets/NasalMerged.msh" />
+        <MechanicalObject src="@loader" name="Volume" scale3d="1 1 1" rotation="0 0 0"/>
+
+        <TetrahedronSetTopologyContainer name="TetraContainer" position="@Volume.position" src="@loader" tags=" "/>
+        <TetrahedronSetTopologyModifier name="Modifier" />
+        <TetrahedronSetGeometryAlgorithms name="GeomAlgo" template="Vec3d" />
+
+        <MeshMatrixMass massDensity="1.0" topology="@TetraContainer"/>
+        
+        <!-- You'll need to adjust the BoxROI coordinates based on your mesh dimensions -->
+        <!-- This is a placeholder - check your mesh bounds first -->
+        <BoxROI template="Vec3d" box="-10 -10 -10 10 10 10" drawBoxes="1" position="@Volume.rest_position" name="FixedROI"/>
+        <FixedConstraint indices="@FixedROI.indices" />
+        
+        <!-- Adjust material properties for nasal tissue if needed -->
+        <FastTetrahedralCorotationalForceField name="FEM" youngModulus="5000" poissonRatio="0.45" method="large" />
+        
+        <!-- Optional: Ground plane force field -->
+        <PlaneForceField normal="0 1 0" d="-50" stiffness="100000" showPlane="1" showPlaneSize="20"/>
+        
+        <Node name="NasalSurface">
+            <TriangleSetTopologyContainer name="TriContainer" fileTopology="" tags=" " />
+            <TriangleSetTopologyModifier name="Modifier" />
+            <TriangleSetGeometryAlgorithms name="GeomAlgo" template="Vec3d" />
+            
+            <Tetra2TriangleTopologicalMapping input="@../TetraContainer" output="@TriContainer" />
+            <TriangularBendingSprings name="FEM-Bend" stiffness="300" damping="1.0" topology="@TriContainer" />
+            <TriangleCollisionModel />
+            
+            <Node name="NasalVisu">
+                <OglModel name="Visual" color="pink" />
+                <IdentityMapping input="@../../Volume" output="@Visual" />
+            </Node>
+        </Node>        
+    </Node>
+</Node>

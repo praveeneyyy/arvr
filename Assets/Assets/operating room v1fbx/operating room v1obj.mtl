@@ -1,0 +1,654 @@
+# 3ds Max Wavefront OBJ Exporter v0.94b - (c)2007 guruware
+# File Created: 08.03.2011 11:32:46
+
+newmtl ceiling
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka F:\operation room\ceiling.jpg
+	map_Kd F:\operation room\ceiling.jpg
+
+newmtl whitealls
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.9529 0.9529 0.9529
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl greenwalls
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.3490 0.5373 0.3725
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl metal_ceiling
+	Ns 20.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.3686 0.3686 0.3686
+	Ks 0.5850 0.5850 0.5850
+	Ke 0.0000 0.0000 0.0000
+
+newmtl 13___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.9686 0.8549 0.8000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl metal_operation_table
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.3020 0.3020 0.3020
+	Ks 0.4950 0.4950 0.4950
+	Ke 0.0000 0.0000 0.0000
+
+newmtl leather_operation_table
+	Ns 21.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.1765 0.1765 0.1765
+	Ks 0.4500 0.4500 0.4500
+	Ke 0.0000 0.0000 0.0000
+	map_bump F:\operation room\operation room v1\leatherbump.jpg
+	bump F:\operation room\operation room v1\leatherbump.jpg
+
+newmtl cable
+	Ns 20.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.1255 0.1255 0.1255
+	Ks 0.4050 0.4050 0.4050
+	Ke 0.0000 0.0000 0.0000
+
+newmtl white_metal_operation_table
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.7765 0.7765 0.7765
+	Ks 0.1800 0.1800 0.1800
+	Ke 0.0000 0.0000 0.0000
+
+newmtl white_metal_operation_table_logo
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.7765 0.7765 0.7765
+	Ks 0.1800 0.1800 0.1800
+	Ke 0.0000 0.0000 0.0000
+	map_Ka F:\operation room\operation room v1\medcarelogo.jpg
+	map_Kd F:\operation room\operation room v1\medcarelogo.jpg
+
+newmtl plastic_operation_table
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.2824 0.2824 0.2824
+	Ks 0.3150 0.3150 0.3150
+	Ke 0.0000 0.0000 0.0000
+
+newmtl pendatcontrol
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka F:\operation room\operation room v1\pendantcontrol.jpg
+	map_Kd F:\operation room\operation room v1\pendantcontrol.jpg
+
+newmtl infusion_pole_metal
+	Ns 40.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.2314 0.2314 0.2314
+	Ks 0.5850 0.5850 0.5850
+	Ke 0.0000 0.0000 0.0000
+
+newmtl darkgray_plastic
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.3176 0.3176 0.3176
+	Ks 0.3600 0.3600 0.3600
+	Ke 0.0000 0.0000 0.0000
+
+newmtl 16___Default
+	Ns 55.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.8550 0.8550 0.8550
+	Ke 0.0000 0.0000 0.0000
+	map_d F:\operation room\operation room v1\infpoleopacity2.jpg
+
+newmtl orangeplasticinfusionpole
+	Ns 20.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.9333 0.6157 0.0667
+	Ks 0.3150 0.3150 0.3150
+	Ke 0.0000 0.0000 0.0000
+
+newmtl infusion_plastic
+	Ns 55.0000
+	Ni 1.5000
+	d 0.3500
+	Tr 0.3500
+	Tf 0.3500 0.3500 0.3500 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.8550 0.8550 0.8550
+	Ke 0.0000 0.0000 0.0000
+
+newmtl wire_085028177
+	Ns 32
+	d 1
+	Tr 1
+	Tf 1 1 1
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.3333 0.1098 0.6941
+	Ks 0.3500 0.3500 0.3500
+
+newmtl surgical_lights_black
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.1255 0.1255 0.1255
+	Ks 0.5400 0.5400 0.5400
+	Ke 0.0000 0.0000 0.0000
+
+newmtl surgical_lights_white
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.8157 0.8157 0.8157
+	Ks 0.5400 0.5400 0.5400
+	Ke 0.0000 0.0000 0.0000
+
+newmtl surgicallightsmetal
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.3961 0.3961 0.3961
+	Ks 0.6300 0.6300 0.6300
+	Ke 0.0000 0.0000 0.0000
+
+newmtl screen
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka F:\operation room\operation room v1\screendisplay1.jpg
+	map_Kd F:\operation room\operation room v1\screendisplay1.jpg
+	map_Ke F:\operation room\operation room v1\screendisplay1.jpg
+
+newmtl bluemirrorsurgicallights
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5059 0.6392 0.8824
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__9_Raytrace.tga
+
+newmtl lightbulbs
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 1.0000 1.0000 1.0000
+
+newmtl 03___Default
+	Ns 55.0000
+	Ni 1.5000
+	d 0.5500
+	Tr 0.5500
+	Tf 0.5500 0.5500 0.5500 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.6314 0.9529
+	Ks 0.7650 0.7650 0.7650
+	Ke 0.0000 0.0000 0.0000
+	map_bump F:\operation room\operation room v1\stripes.jpg
+	bump F:\operation room\operation room v1\stripes.jpg
+
+newmtl lightscontrols
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka F:\operation room\operation room v1\lightscontrol.jpg
+	map_Kd F:\operation room\operation room v1\lightscontrol.jpg
+	map_Ke F:\operation room\operation room v1\lightscontrol.jpg
+
+newmtl redbuton
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.9922 0.1961 0.1961
+	Ks 0.3600 0.3600 0.3600
+	Ke 0.0000 0.0000 0.0000
+
+newmtl anesthesia_grey_plastiic
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.4196 0.4196 0.4196
+	Ks 0.3600 0.3600 0.3600
+	Ke 0.0000 0.0000 0.0000
+
+newmtl anesthesia_controls
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka F:\operation room\operation room v1\anesthesia controls.jpg
+	map_Kd F:\operation room\operation room v1\anesthesia controls.jpg
+
+newmtl anesthesia_black_plastiic
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.1922 0.1922 0.1922
+	Ks 0.3600 0.3600 0.3600
+	Ke 0.0000 0.0000 0.0000
+
+newmtl blue
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.2824 0.3961 0.9647
+	Ks 0.3150 0.3150 0.3150
+	Ke 0.0000 0.0000 0.0000
+
+newmtl gradation
+	Ns 65.0000
+	Ni 1.5000
+	d 0.3500
+	Tr 0.3500
+	Tf 0.3500 0.3500 0.3500 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0980 0.0980 0.0980
+	Ks 0.8550 0.8550 0.8550
+	Ke 0.0000 0.0000 0.0000
+	map_d F:\operation room\operation room v1\gradationbump.jpg
+	map_bump F:\operation room\operation room v1\gradationbump.jpg
+	bump F:\operation room\operation room v1\gradationbump.jpg
+
+newmtl pressure
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.2627 0.4275 0.8392
+	Ks 0.3150 0.3150 0.3150
+	Ke 0.0000 0.0000 0.0000
+	map_Ka F:\operation room\operation room v1\pressure_indicator.jpg
+	map_Kd F:\operation room\operation room v1\pressure_indicator.jpg
+
+newmtl plexiglass
+	Ns 45.0000
+	Ni 1.5000
+	d 0.2000
+	Tr 0.2000
+	Tf 0.2000 0.2000 0.2000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.2941 0.2941 0.2941
+	Ks 0.8550 0.8550 0.8550
+	Ke 0.0000 0.0000 0.0000
+
+newmtl blackglass
+	Ns 50.0000
+	Ni 1.5000
+	d 0.4000
+	Tr 0.4000
+	Tf 0.4000 0.4000 0.4000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.1137 0.1137 0.1137
+	Ks 0.8550 0.8550 0.8550
+	Ke 0.0000 0.0000 0.0000
+
+newmtl clearglass
+	Ns 65.0000
+	Ni 1.5000
+	d 0.1500
+	Tr 0.1500
+	Tf 0.1500 0.1500 0.1500 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.8550 0.8550 0.8550
+	Ke 0.0000 0.0000 0.0000
+
+newmtl magenta
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.9725 0.0902 0.8588
+	Ks 0.3150 0.3150 0.3150
+	Ke 0.0000 0.0000 0.0000
+
+newmtl yellow
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.9294 0.6353 0.0078
+	Ks 0.3150 0.3150 0.3150
+	Ke 0.0000 0.0000 0.0000
+
+newmtl ventilation_hose
+	Ns 25.0000
+	Ni 1.5000
+	d 0.5000
+	Tr 0.5000
+	Tf 0.5000 0.5000 0.5000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.4050 0.4050 0.4050
+	Ke 0.0000 0.0000 0.0000
+	map_bump F:\operation room\operation room v1\stripes2.jpg
+	bump F:\operation room\operation room v1\stripes2.jpg
+
+newmtl wire_225087143
+	Ns 32
+	d 1
+	Tr 1
+	Tf 1 1 1
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.8824 0.3412 0.5608
+	Ks 0.3500 0.3500 0.3500
+
+newmtl anesthesia_screen
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka F:\operation room\operation room v1\anesteziascreen.jpg
+	map_Kd F:\operation room\operation room v1\anesteziascreen.jpg
+	map_Ke F:\operation room\operation room v1\anesteziascreen.jpg
+
+newmtl anesthesia_gradation
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka F:\operation room\operation room v1\anesthesiagradation.jpg
+	map_Kd F:\operation room\operation room v1\anesthesiagradation.jpg
+
+newmtl air
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.2627 0.4275 0.8392
+	Ks 0.3150 0.3150 0.3150
+	Ke 0.0000 0.0000 0.0000
+	map_Ka F:\operation room\operation room v1\air.jpg
+	map_Kd F:\operation room\operation room v1\air.jpg
+
+newmtl oxygen
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.2627 0.4275 0.8392
+	Ks 0.3150 0.3150 0.3150
+	Ke 0.0000 0.0000 0.0000
+	map_Ka F:\operation room\operation room v1\oxygen.jpg
+	map_Kd F:\operation room\operation room v1\oxygen.jpg
+
+newmtl n2o
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.2627 0.4275 0.8392
+	Ks 0.3150 0.3150 0.3150
+	Ke 0.0000 0.0000 0.0000
+	map_Ka F:\operation room\operation room v1\n2o.jpg
+	map_Kd F:\operation room\operation room v1\n2o.jpg
+
+newmtl electro_led_green
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.3804 0.8471 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.3804 0.8471 0.0000
+
+newmtl monitoringdevice
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka F:\operation room\operation room v1\monitoringdevice.jpg
+	map_Kd F:\operation room\operation room v1\monitoringdevice.jpg
+
+newmtl 07___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka F:\operation room\operation room v1\electrosurgicaltexture1.jpg
+	map_Kd F:\operation room\operation room v1\electrosurgicaltexture1.jpg
+
+newmtl marmura
+	Ns 20.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.4050 0.4050 0.4050
+	Ke 0.0000 0.0000 0.0000
+	map_Ka F:\operation room\floortile.jpg
+	map_Kd F:\operation room\floortile.jpg
+
+newmtl blinds
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.6471 0.7059
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl ceiling_lights
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 1.0000 1.0000 1.0000

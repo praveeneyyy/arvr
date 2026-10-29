@@ -1,0 +1,22 @@
+# 
+# Wavefront material file
+# Converted by the DEEP Exploration  Deep Exploration 6.5 x64 6.5.0.9182
+# Right Hemisphere, LTD
+# http://www.righthemisphere.com/
+# 
+
+newmtl red_blood_cell
+Ka 0.596078 0 0
+Kd 0.596078 0 0
+Ks 0.9 0.9 0.9
+illum 2
+Ns 11.3137
+map_Kd 
+map_bump red_blood_cell_displacement.png
+bump red_blood_cell_displacement.png
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
