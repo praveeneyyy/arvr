@@ -284,15 +284,16 @@ namespace MedicalSimulation.AI
             Debug.Log($"[MedicalAIOrchestrator] Live Context Updated: Selected {meta.anatomicalName}");
         }
 
-        private void HandleOrganDeselected(OrganInteractable organ)
+        private void HandleOrganDeselected()
         {
             liveContext.ClearSelectedOrgan();
             OnActiveOrganChanged?.Invoke(null);
         }
 
-        private void HandleProcedureStepChanged(int stepIndex, string stepTitle)
+        private void HandleProcedureStepChanged(ProcedureRunner.ProcedureStep step, int stepIndex, int total)
         {
-            liveContext.SetProcedureContext("Clinical Procedure", $"Step {stepIndex + 1}: {stepTitle}");
+            string title = step != null ? step.stepTitle : $"Step {stepIndex + 1}";
+            liveContext.SetProcedureContext("Clinical Procedure", $"Step {stepIndex + 1}/{total}: {title}");
         }
 
         private void HandleSceneLoaded(Scene scene, LoadSceneMode mode)

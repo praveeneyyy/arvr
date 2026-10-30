@@ -124,7 +124,7 @@ namespace MedicalSimulation.UI
                 "Modules: 0 | Procedures: 0 | Score: —",
                 new Vector2(0.45f, 0f), new Vector2(0.75f, 1f),
                 Vector2.zero, Vector2.zero,
-                14, TextAlignmentOptions.MidlineCenter, new Color(0.6f, 0.85f, 0.95f));
+                14, TextAlignmentOptions.Center, new Color(0.6f, 0.85f, 0.95f));
 
             // AI Assistant Button
             CreateUIButton("Btn_AIAssistant", headerGo.transform, "<color=#00E5FF>AI ASSISTANT</color>",
@@ -197,7 +197,7 @@ namespace MedicalSimulation.UI
                 "<color=#00E5FF>SELECT AN ORGAN</color>",
                 new Vector2(0.05f, 0.88f), new Vector2(0.95f, 0.98f),
                 Vector2.zero, Vector2.zero,
-                16, TextAlignmentOptions.MidlineCenter, Color.white);
+                16, TextAlignmentOptions.Center, Color.white);
 
             _organDetailsText = CreateUIText("OrganDetails", panel.transform,
                 "Click or point to any anatomical structure to inspect its physiological function, vascular supply, and clinical implications.",

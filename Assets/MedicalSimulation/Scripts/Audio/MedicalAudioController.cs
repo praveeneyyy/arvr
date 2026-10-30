@@ -178,6 +178,14 @@ namespace MedicalSimulation.Audio
 
         // ── Volume controls ───────────────────────────────────────────────────
 
+        public void SetMasterVolume(float v)
+        {
+            SetPhysiologicalVolume(v);
+            SetProcedureVolume(v);
+            SetUIVolume(v);
+            SetAmbientVolume(v);
+        }
+
         public void SetPhysiologicalVolume(float v) => SetMixerGroup("PhysiologicalVolume", v);
         public void SetProcedureVolume(float v)      => SetMixerGroup("ProcedureVolume",     v);
         public void SetUIVolume(float v)             => SetMixerGroup("UIVolume",            v);

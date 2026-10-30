@@ -29,7 +29,7 @@ namespace MedicalSimulation.Core
             QualitySettings.shadowResolution     = ShadowResolution.High;
             QualitySettings.antiAliasing         = 4;
             QualitySettings.anisotropicFiltering = AnisotropicFiltering.ForceEnable;
-            QualitySettings.masterTextureLimit   = 0; // Full resolution
+            QualitySettings.globalTextureMipmapLimit   = 0; // Full resolution
             QualitySettings.maximumLODLevel      = 0;
             QualitySettings.particleRaycastBudget = 256;
             Application.targetFrameRate          = 60;
@@ -44,7 +44,7 @@ namespace MedicalSimulation.Core
             QualitySettings.shadowResolution     = ShadowResolution.Medium;
             QualitySettings.antiAliasing         = 2;
             QualitySettings.anisotropicFiltering = AnisotropicFiltering.Enable;
-            QualitySettings.masterTextureLimit   = 0;
+            QualitySettings.globalTextureMipmapLimit   = 0;
             QualitySettings.maximumLODLevel      = 0;
             QualitySettings.particleRaycastBudget = 64;
             Application.targetFrameRate          = 90; // Standard VR target

@@ -36,7 +36,7 @@ namespace MedicalSimulation.Core
         public ProcedureStep CurrentStep => (steps != null && steps.Count > CurrentStepIndex) ? steps[CurrentStepIndex] : null;
 
         // ── Events ────────────────────────────────────────────────────────────
-        public event System.Action<ProcedureStep, int, int> OnStepChanged; // currentStep, index, total
+        public static event System.Action<ProcedureStep, int, int> OnStepChanged; // currentStep, index, total
         public event System.Action<ProcedureStep> OnStepCompleted;
         public event System.Action<string, float, int> OnProcedureFinished; // name, totalTime, errors
 
