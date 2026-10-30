@@ -437,7 +437,7 @@ namespace MedicalSimulation.UI
             closeImg.color = new Color(0.8f, 0.2f, 0.2f, 0.8f);
             closeButton = closeGo.AddComponent<Button>();
             var closeTxt = CreateUIElement("X", closeGo.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero).AddComponent<TextMeshProUGUI>();
-            closeTxt.text = "✕";
+            closeTxt.text = "X";
             closeTxt.alignment = TextAlignmentOptions.Center;
             closeTxt.fontSize = 16;
 
@@ -515,7 +515,7 @@ namespace MedicalSimulation.UI
             sendGo.AddComponent<Image>().color = new Color(0.0f, 0.75f, 0.9f);
             sendButton = sendGo.AddComponent<Button>();
             var sendTxt = CreateUIElement("Txt", sendGo.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero).AddComponent<TextMeshProUGUI>();
-            sendTxt.text = "➤";
+            sendTxt.text = "SEND"; sendTxt.fontSize = 11; sendTxt.fontStyle = FontStyles.Bold;
             sendTxt.fontSize = 16;
             sendTxt.alignment = TextAlignmentOptions.Center;
             sendTxt.color = Color.black;
@@ -525,7 +525,7 @@ namespace MedicalSimulation.UI
             micGo.AddComponent<Image>().color = new Color(0.12f, 0.22f, 0.32f);
             micButton = micGo.AddComponent<Button>();
             var micTxt = CreateUIElement("Txt", micGo.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero).AddComponent<TextMeshProUGUI>();
-            micTxt.text = "🎤";
+            micTxt.text = "MIC"; micTxt.fontSize = 11; micTxt.fontStyle = FontStyles.Bold;
             micTxt.fontSize = 16;
             micTxt.alignment = TextAlignmentOptions.Center;
 
@@ -534,7 +534,7 @@ namespace MedicalSimulation.UI
             clearGo.AddComponent<Image>().color = new Color(0.18f, 0.12f, 0.15f);
             clearButton = clearGo.AddComponent<Button>();
             var clearTxt = CreateUIElement("Txt", clearGo.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero).AddComponent<TextMeshProUGUI>();
-            clearTxt.text = "🗑";
+            clearTxt.text = "CLR"; clearTxt.fontSize = 11; clearTxt.fontStyle = FontStyles.Bold;
             clearTxt.fontSize = 15;
             clearTxt.alignment = TextAlignmentOptions.Center;
 
