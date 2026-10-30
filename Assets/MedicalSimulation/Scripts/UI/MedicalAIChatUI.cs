@@ -394,19 +394,24 @@ namespace MedicalSimulation.UI
                 gameObject.AddComponent<GraphicRaycaster>();
             }
 
-            // Launcher Button (Bottom-Right)
-            var launcherGo = CreateUIElement("AI_Launcher_Button", transform, new Vector2(1f, 0f), new Vector2(1f, 0f), new Vector2(0.5f, 0.5f), new Vector2(-120, 50), new Vector2(180, 48));
+            // Launcher Button (Bottom-Right) - Sleek Clinical Pill
+            var launcherGo = CreateUIElement("AI_Launcher_Button", transform, new Vector2(1f, 0f), new Vector2(1f, 0f), new Vector2(1f, 0f), new Vector2(-24, 20), new Vector2(190, 42));
             var launcherImg = launcherGo.AddComponent<Image>();
-            launcherImg.color = new Color(0.0f, 0.7f, 0.85f, 0.95f);
+            launcherImg.color = MedicalUITheme.SurfaceElevated;
             var launcherBtn = launcherGo.AddComponent<Button>();
+            var colors = launcherBtn.colors;
+            colors.normalColor = MedicalUITheme.SurfaceElevated;
+            colors.highlightedColor = MedicalUITheme.SurfaceHover;
+            colors.pressedColor = MedicalUITheme.SurfacePressed;
+            launcherBtn.colors = colors;
             launcherBtn.onClick.AddListener(TogglePanel);
 
             var launcherTxtGo = CreateUIElement("Text", launcherGo.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
             var launcherTmp = launcherTxtGo.AddComponent<TextMeshProUGUI>();
-            launcherTmp.text = "<b>[ AI ASSISTANT ]</b>";
-            launcherTmp.fontSize = 15;
+            launcherTmp.text = "<b><color=#00E5FF>◉</color> AI ASSISTANT</b>";
+            launcherTmp.fontSize = 12;
             launcherTmp.alignment = TextAlignmentOptions.Center;
-            launcherTmp.color = Color.black;
+            launcherTmp.color = MedicalUITheme.TextPrimary;
 
             // Main Chat Panel (Right Docked: 520px wide, fills height with margin)
             chatPanel = CreateUIElement("ChatPanel", transform, new Vector2(1f, 0f), new Vector2(1f, 1f), new Vector2(1f, 0.5f), new Vector2(-280, 0), new Vector2(520, -60));

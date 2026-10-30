@@ -127,6 +127,8 @@ namespace MedicalSimulation.Anatomy
             _targetPanOffset = Vector3.zero;
         }
 
+        public void ResetCamera() => ResetView();
+
         public void SetOrbitTarget(Vector3 worldPosition)
         {
             if (pivot != null) pivot.position = worldPosition;

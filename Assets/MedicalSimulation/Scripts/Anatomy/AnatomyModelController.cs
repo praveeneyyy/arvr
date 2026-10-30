@@ -30,6 +30,9 @@ namespace MedicalSimulation.Anatomy
         // ── Events ────────────────────────────────────────────────────────────
         public event System.Action<OrganInteractable> OnSelectionChanged;
 
+        public OrganInteractable SelectedOrgan => _selectedOrgan;
+        public OrganInteractable GetSelectedOrgan() => _selectedOrgan;
+
         void Awake()
         {
             if (anatomyRoot == null) anatomyRoot = transform;
