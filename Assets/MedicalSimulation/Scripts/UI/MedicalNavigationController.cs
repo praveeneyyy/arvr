@@ -121,6 +121,7 @@ namespace MedicalSimulation.UI
             CreateNavButton("Dental Surgical Lab", "Teeth", navContainer.transform);
             CreateNavButton("Diagnosis & Pathology", "05_DiagnosisLab", navContainer.transform);
             CreateNavButton("Procedure Suite", "06_ProcedureLab", navContainer.transform);
+            CreateNavButton("Operating Theatre", "08_VirtualOperatingTheatre", navContainer.transform);
             CreateNavButton("Clinical Assessment", "07_FinalAssessment", navContainer.transform);
 
             // Collapse Sidebar Toggle (Bottom of Sidebar)
@@ -191,6 +192,7 @@ namespace MedicalSimulation.UI
                 "Teeth" => "Workstation / Dental Surgical Simulation",
                 "05_DiagnosisLab" => "Workstation / Clinical Diagnosis & Pathology",
                 "06_ProcedureLab" => "Workstation / Surgical Procedure Lab",
+                "08_VirtualOperatingTheatre" => "Virtual Hospital / 3D Operating Theatre Suite",
                 "07_FinalAssessment" => "Workstation / Residency Clinical Assessment",
                 _ => $"Workstation / {sceneName}"
             };

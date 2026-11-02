@@ -1,49 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using TMPro;
+using MedicalSimulation.UI;
 
 namespace MedicalSimulation.Core
 {
     /// <summary>
-    /// Story-driven Campaign & Level progression system.
-    /// Turns the medical AR/VR simulator into an interactive, gamified medical journey
-    /// with objectives, mission briefings, clinical alerts, and level advancement.
+    /// Story-driven Step-by-Step Clinical Residency Campaign System.
+    /// Manages the 6-Act, 18-Step clinical journey and orchestrates 3D modules,
+    /// dynamic subsystem inspection, camera focus, and audio cues.
     /// </summary>
     public class LevelStoryController : MonoBehaviour
     {
         public static LevelStoryController Instance { get; private set; }
 
         [System.Serializable]
-        public class StoryLevel
+        public class ClinicalStep
         {
-            public int levelNumber;
-            public string levelName;
-            public string sceneName;
-            [TextArea(2, 4)] public string briefing;
-            public string primaryObjective;
-            public string hint;
-            public bool isUnlocked;
-            public bool isCompleted;
-            public int targetScore;
+            public string stepTitle;
+            [TextArea(2, 4)] public string narrativeBriefing;
+            public string clinicalObjective;
+            public string surgicalHint;
+            public MedicalComponentType targetComponent;
+            public string targetSubsystem;
+            public string audioClipName;
+            public Vector3 cameraOffset;
         }
 
-        [Header("Campaign Narrative")]
-        [SerializeField] private string campaignTitle = "Operation Caduceus: Clinical Medical Residency";
-        [SerializeField] private List<StoryLevel> levels = new List<StoryLevel>();
+        [System.Serializable]
+        public class StoryAct
+        {
+            public int actNumber;
+            public string actTitle;
+            public string patientProfile;
+            public List<ClinicalStep> steps = new List<ClinicalStep>();
+        }
 
-        [Header("Runtime State")]
-        public int currentLevelIndex = 0;
-        private Canvas storyCanvas;
-        private GameObject briefingPanel;
-        private TextMeshProUGUI levelTitleText;
-        private TextMeshProUGUI briefingBodyText;
-        private TextMeshProUGUI objectiveText;
-        private TextMeshProUGUI hintText;
-        private Button advanceButton;
-        private Button toggleBriefingButton;
+        [Header("Clinical Campaign Architecture")]
+        [SerializeField] private string campaignTitle = "Charité Surgical Residency: Clinical Case Journey";
+        [SerializeField] private List<StoryAct> acts = new List<StoryAct>();
+
+        [Header("Runtime Progression State")]
+        public int currentActIndex = 0;
+        public int currentStepIndex = 0;
+        public bool isStoryModeActive = true;
 
         void Awake()
         {
@@ -62,9 +63,8 @@ namespace MedicalSimulation.Core
 
         void Start()
         {
-            DetectCurrentSceneLevel();
-            BuildHUDOverlay();
-            ShowMissionBriefing(currentLevelIndex);
+            // Sync with workstation UI
+            NotifyUIOfCurrentStep();
         }
 
         void OnEnable()
@@ -77,238 +77,367 @@ namespace MedicalSimulation.Core
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
 
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            NotifyUIOfCurrentStep();
+        }
+
+        // =========================================================================
+        // 6-ACT, 18-STEP CLINICAL CAMPAIGN DATA
+        // =========================================================================
         private void InitializeDefaultCampaign()
         {
-            if (levels != null && levels.Count > 0) return;
+            if (acts != null && acts.Count > 0) return;
 
-            levels = new List<StoryLevel>
+            acts = new List<StoryAct>
             {
-                new StoryLevel
+                // ACT 1: Full-Body Anatomy Orientation
+                new StoryAct
                 {
-                    levelNumber = 1,
-                    levelName = "Level 1: Full-Body Anatomy Orientation",
-                    sceneName = "04_AnatomyLab",
-                    briefing = "Welcome to the Medical Simulation Lab, Doctor. Your clinical residency begins here. Inspect the 3D human torso, isolate vital physiological systems (Skeletal, Cardiovascular, Digestive, Respiratory), and test the multi-planar cross-section slice tool.",
-                    primaryObjective = "Inspect and select at least 3 major anatomical organs. Ask the Clinical AI Assistant about their physiological functions.",
-                    hint = "Click on any organ to inspect. Press 'Space' to toggle Exploded View, or press 'H' to consult your AI assistant.",
-                    isUnlocked = true,
-                    targetScore = 100
+                    actNumber = 1,
+                    actTitle = "Act I: Splanchnic & Musculoskeletal Architecture",
+                    patientProfile = "Academic Case: Baseline Anatomical Reference. Charité Surgical Simulation Center.",
+                    steps = new List<ClinicalStep>
+                    {
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 1.1: Axial & Appendicular Skeletal Framework",
+                            narrativeBriefing = "Welcome to your residency shift, Doctor. Begin by examining the load-bearing osteological framework: cranium, cervical-to-lumbar spine, and cortical ribcage.",
+                            clinicalObjective = "Isolate the Skeletal System. Verify vertebral alignment and cortical bone density.",
+                            surgicalHint = "Use the Left Anatomy Panel to toggle 'Skeletal' and inspect bone porosity.",
+                            targetComponent = MedicalComponentType.FullAnatomy,
+                            targetSubsystem = "Skeletal",
+                            audioClipName = "lab_ambience",
+                            cameraOffset = new Vector3(0.12f, 0.4f, -2.2f)
+                        },
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 1.2: Muscular Striations & Aponeuroses",
+                            narrativeBriefing = "Examine the dynamic muscular layer. Note the directional fiber striations of the pectoralis, biceps brachii, rectus abdominis, and quadriceps.",
+                            clinicalObjective = "Examine the aponeurotic tendinous attachments and muscle fiber architecture.",
+                            surgicalHint = "Inspect the glistening ivory tendons anchoring the abdominal wall.",
+                            targetComponent = MedicalComponentType.FullAnatomy,
+                            targetSubsystem = "Muscular",
+                            audioClipName = "ui_confirm",
+                            cameraOffset = new Vector3(0.12f, 0.4f, -2.0f)
+                        },
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 1.3: Visceral Splanchnic Organs & Cutaway",
+                            narrativeBriefing = "Review internal organ placement inside the frosted acrylic cutaway silhouette: bilateral lobed lungs, gastric loop, and retroperitoneal kidneys.",
+                            clinicalObjective = "Verify anatomical relationship of internal visceral organs to the ribcage.",
+                            surgicalHint = "Observe the frosted acrylic silhouette providing spatial depth without obscuring organs.",
+                            targetComponent = MedicalComponentType.FullAnatomy,
+                            targetSubsystem = "Integumentary",
+                            audioClipName = "ui_select",
+                            cameraOffset = new Vector3(0.12f, 0.35f, -1.8f)
+                        }
+                    }
                 },
-                new StoryLevel
+
+                // ACT 2: Acute Myocardial Infarction Emergency
+                new StoryAct
                 {
-                    levelNumber = 2,
-                    levelName = "Level 2: Cardiac Electrophysiology & Hemodynamics",
-                    sceneName = "heart",
-                    briefing = "Emergency in Cardiology! A patient presents with sinus tachycardia and valve irregularities. Examine the 4-chamber animated heart, adjust heart rate telemetry, and observe systemic blood flow.",
-                    primaryObjective = "Analyze systolic and diastolic deformation curves. Query the AI on valve mechanics and stroke volume.",
-                    hint = "Look at the pulsating myocardium. Ask the AI: 'Explain the heart valves and cardiac cycle'.",
-                    isUnlocked = true,
-                    targetScore = 100
+                    actNumber = 2,
+                    actTitle = "Act II: Cardiology Code Blue & Hemodynamics",
+                    patientProfile = "Patient: 54-year-old male presenting with acute crushing retrosternal pain. EKG indicates anterior STEMI with ST-elevation in V1-V4.",
+                    steps = new List<ClinicalStep>
+                    {
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 2.1: Four-Chamber Isolation & Epicardial Sulci",
+                            narrativeBriefing = "CODE BLUE! Emergency in Cardiology. Isolate the four-chamber heart. Inspect ventricular contours, atrial appendages, and the interventricular sulci.",
+                            clinicalObjective = "Locate anterior and posterior interventricular sulci bordered by adipose tissue.",
+                            surgicalHint = "Notice the creamy pale-yellow epicardial fat pads protecting coronary vessels.",
+                            targetComponent = MedicalComponentType.Cardiology,
+                            targetSubsystem = "Epicardial Fat Pads",
+                            audioClipName = "heartbeat",
+                            cameraOffset = new Vector3(0f, 0.2f, -1.9f)
+                        },
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 2.2: Coronary Vasculature & LAD Lesion",
+                            narrativeBriefing = "Trace the Left Anterior Descending (LAD) coronary artery. Identify the critical stenosis that is starving the anterior myocardial wall.",
+                            clinicalObjective = "Trace LAD and RCA arteries against the deep cyanotic venous drainage.",
+                            surgicalHint = "The LAD is highlighted in high-gloss arterial crimson with a serous clearcoat.",
+                            targetComponent = MedicalComponentType.Cardiology,
+                            targetSubsystem = "LAD Coronary Artery",
+                            audioClipName = "heartbeat",
+                            cameraOffset = new Vector3(0.05f, 0.15f, -1.6f)
+                        },
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 2.3: Systolic Perfusion & Cardiac Output",
+                            narrativeBriefing = "Evaluate chamber contractility. The left ventricular ejection fraction is depressed at 42%. Prepare for urgent percutaneous coronary intervention (PCI).",
+                            clinicalObjective = "Review myocardial Subsurface Scattering and calculate cardiac output (4.2 L/min).",
+                            surgicalHint = "Listen to the synchronized ECG monitor and pulsatile valve acoustics.",
+                            targetComponent = MedicalComponentType.Cardiology,
+                            targetSubsystem = "Left Ventricle",
+                            audioClipName = "monitor_ecg_beep",
+                            cameraOffset = new Vector3(0f, 0.1f, -1.5f)
+                        }
+                    }
                 },
-                new StoryLevel
+
+                // ACT 3: Hepatic Trauma & Biliary System Assessment
+                new StoryAct
                 {
-                    levelNumber = 3,
-                    levelName = "Level 3: Dental Surgical Lab & Tooth Extraction",
-                    sceneName = "Teeth",
-                    briefing = "The patient requires surgical intervention on an impacted lower molar. Maintain sterility, identify alveolar landmarks, administer local anesthesia, and execute the atraumatic extraction.",
-                    primaryObjective = "Complete the 5-step extraction procedure while preventing cortical plate fracture and nerve impingement.",
-                    hint = "Use your surgical instruments. Check the Dental HUD metrics for tooth mobility and root elevation.",
-                    isUnlocked = true,
-                    targetScore = 100
+                    actNumber = 3,
+                    actTitle = "Act III: Hepatic Trauma & Biliary Tree Triage",
+                    patientProfile = "Patient: 38-year-old female post-motor vehicle collision. Severe right upper quadrant tenderness, guarding, and localized hemoperitoneum.",
+                    steps = new List<ClinicalStep>
+                    {
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 3.1: Glisson's Capsule & Parenchyma Inspection",
+                            narrativeBriefing = "Perform laparoscopic exploration of the liver. Inspect the smooth, reflective Glisson's peritoneal capsule for lacerations or hematoma.",
+                            clinicalObjective = "Inspect right and left liver lobes for parenchymal fracture.",
+                            surgicalHint = "Look for the burgundy-brown hepatic sheen and smooth peritoneal reflection.",
+                            targetComponent = MedicalComponentType.SoftTissue,
+                            targetSubsystem = "Liver Right Lobe",
+                            audioClipName = "lab_ambience",
+                            cameraOffset = new Vector3(0f, 0.1f, -1.8f)
+                        },
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 3.2: 8 Couinaud Segments & Portal Triad",
+                            narrativeBriefing = "Delineate functional anatomy according to the 8 Couinaud segments. Isolate the portal triad: hepatic artery, portal vein, and bile duct.",
+                            clinicalObjective = "Identify the high-pressure crimson hepatic artery and the low-pressure purple portal vein.",
+                            surgicalHint = "The portal vein carries 75% of hepatic inflow; ensure vascular pedicle integrity.",
+                            targetComponent = MedicalComponentType.SoftTissue,
+                            targetSubsystem = "Portal Triad",
+                            audioClipName = "ui_confirm",
+                            cameraOffset = new Vector3(0.08f, 0.05f, -1.5f)
+                        },
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 3.3: Gallbladder & Biliary Arborization",
+                            narrativeBriefing = "Examine the turgid emerald-olive gallbladder and cystic duct. Verify no biliary leakage before completing the trauma staging.",
+                            clinicalObjective = "Confirm integrity of the common bile duct and gallbladder mucosal wall.",
+                            surgicalHint = "The gallbladder demonstrates natural olive-green translucency with SSS.",
+                            targetComponent = MedicalComponentType.SoftTissue,
+                            targetSubsystem = "Gallbladder",
+                            audioClipName = "ui_select",
+                            cameraOffset = new Vector3(0.04f, 0.0f, -1.3f)
+                        }
+                    }
                 },
-                new StoryLevel
+
+                // ACT 4: Maxillofacial Surgery & Tooth Extraction
+                new StoryAct
                 {
-                    levelNumber = 4,
-                    levelName = "Level 4: Diagnostic Pathology & Final Assessment",
-                    sceneName = "05_DiagnosisLab",
-                    briefing = "Final Board Examination. You are presented with complex physiological anomalies. Review vital signs, examine pathology notes with your AI assistant, and finalize your differential diagnosis.",
-                    primaryObjective = "Review the clinical case study, achieve a passing diagnostic score (>80%), and finish your residency.",
-                    hint = "Ask the AI assistant for a 'Practice Quiz' to review high-yield diagnostic questions.",
-                    isUnlocked = true,
-                    targetScore = 100
+                    actNumber = 4,
+                    actTitle = "Act IV: Maxillofacial Surgery & Tooth Extraction",
+                    patientProfile = "Patient: 26-year-old male with impacted mandibular right third molar (#32) causing severe recurrent pericoronitis and localized trismus.",
+                    steps = new List<ClinicalStep>
+                    {
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 4.1: Dental Arch & Dentition Survey",
+                            narrativeBriefing = "Review the dental anatomy. Inspect all 32 individual permanent teeth, cortical alveolar bone, and stippled vascular gingiva.",
+                            clinicalObjective = "Locate Tooth #32 in the right posterior mandibular quadrant.",
+                            surgicalHint = "Each of the 32 teeth has anatomically differentiated crowns and roots.",
+                            targetComponent = MedicalComponentType.Dental,
+                            targetSubsystem = "Mandible & Maxilla",
+                            audioClipName = "dental_scaler",
+                            cameraOffset = new Vector3(0f, 0.05f, -0.65f)
+                        },
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 4.2: Mandibular Canal & Anesthesia Block",
+                            narrativeBriefing = "Assess proximity to the inferior alveolar nerve canal to prevent paresthesia. Administer local anesthesia at the pterygomandibular space.",
+                            clinicalObjective = "Confirm deep anesthesia and identify the retromolar surgical landmarks.",
+                            surgicalHint = "Verify vascular blanching of the attached gingival margins.",
+                            targetComponent = MedicalComponentType.Dental,
+                            targetSubsystem = "Gingiva & Gums",
+                            audioClipName = "dental_suction",
+                            cameraOffset = new Vector3(0.04f, 0.02f, -0.55f)
+                        },
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 4.3: Atraumatic Luxation & Root Elevation",
+                            narrativeBriefing = "Reflect the mucoperiosteal flap, apply the straight elevator into the periodontal ligament space, and execute atraumatic tooth delivery.",
+                            clinicalObjective = "Elevate the roots cleanly without cortical bone fracture.",
+                            surgicalHint = "Ensure complete root removal and perform sterile socket debridement.",
+                            targetComponent = MedicalComponentType.Dental,
+                            targetSubsystem = "Molars (Target #32)",
+                            audioClipName = "dental_drill",
+                            cameraOffset = new Vector3(0.03f, 0.02f, -0.45f)
+                        }
+                    }
+                },
+
+                // ACT 5: Surgical Metallurgy & Mayo Stand Triage
+                new StoryAct
+                {
+                    actNumber = 5,
+                    actTitle = "Act V: Surgical Metallurgy & Mayo Stand Triage",
+                    patientProfile = "Perioperative Case: Surgical tray preparation for an open cardiothoracic and vascular procedure in Operating Room 3.",
+                    steps = new List<ClinicalStep>
+                    {
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 5.1: AISI 316L Stainless Steel Passivation",
+                            narrativeBriefing = "Sterile scrub-in. Inspect the Mayo stand: all instruments are precision-forged AISI 316L stainless steel with 100% metallic response and zero corrosion.",
+                            clinicalObjective = "Verify instrument count and inspect surgical steel passivation.",
+                            surgicalHint = "Notice the fine anisotropic brushing along instrument shanks.",
+                            targetComponent = MedicalComponentType.Procedure,
+                            targetSubsystem = "Mayo Instrument Tray",
+                            audioClipName = "surgical_instrument_clink",
+                            cameraOffset = new Vector3(0f, 0.45f, -0.65f)
+                        },
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 5.2: Precision Cutting & Grasping Instruments",
+                            narrativeBriefing = "Inspect Scalpel No. 10 with its mirror-polished cutting bevel, atraumatic DeBakey tissue forceps, and curved Metzenbaum dissecting scissors.",
+                            clinicalObjective = "Test scissor pivot action and verify blade alignment.",
+                            surgicalHint = "Cutting edges feature sharp specular reflections (Roughness 0.05).",
+                            targetComponent = MedicalComponentType.Procedure,
+                            targetSubsystem = "Scalpel No. 10",
+                            audioClipName = "surgical_instrument_clink",
+                            cameraOffset = new Vector3(-0.08f, 0.35f, -0.55f)
+                        },
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 5.3: Hemostasis, Needle Driver & Electrocautery",
+                            narrativeBriefing = "Examine curved Kelly hemostats with box-lock ratchets, tungsten carbide needle driver, and the dual-button electrocautery handpiece.",
+                            clinicalObjective = "Confirm electrocautery active electrode tip and clamp ratchet locks.",
+                            surgicalHint = "Diamond-knurled finger rings provide non-slip tactile control during surgery.",
+                            targetComponent = MedicalComponentType.Procedure,
+                            targetSubsystem = "Hemostat Kelly Clamp",
+                            audioClipName = "surgical_instrument_clink",
+                            cameraOffset = new Vector3(0.08f, 0.35f, -0.55f)
+                        }
+                    }
+                },
+
+                // ACT 6: Virtual Operating Theatre & Residency Graduation
+                new StoryAct
+                {
+                    actNumber = 6,
+                    actTitle = "Act VI: Operating Theatre & Residency Graduation",
+                    patientProfile = "Operating Theatre Suite: Full surgical team assembled for definitive procedure under general anesthesia with multi-lead monitoring.",
+                    steps = new List<ClinicalStep>
+                    {
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 6.1: Sterile Field & Dual 4800K Surgical Lights",
+                            narrativeBriefing = "Enter the sterile Operating Suite. Align the dual 4800K LED luminaire reflectors directly over the surgical table for shadowless illumination.",
+                            clinicalObjective = "Position luminaires and establish the sterile operating perimeter.",
+                            surgicalHint = "4800K neutral daylight provides true color fidelity for tissue differentiation.",
+                            targetComponent = MedicalComponentType.OperatingTheatre,
+                            targetSubsystem = "Dual 4800K Luminaires",
+                            audioClipName = "or_ventilation_ambience",
+                            cameraOffset = new Vector3(2.2f, 1.8f, -3.2f)
+                        },
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 6.2: Anesthesia Ventilation & Multi-Lead Telemetry",
+                            narrativeBriefing = "Review patient vital telemetry: Sinus 72 BPM, SpO2 99%, EtCO2 36 mmHg, Blood Pressure 120/80 mmHg. Anesthesia depth stable.",
+                            clinicalObjective = "Verify continuous hemodynamic telemetry and ventilator parameters.",
+                            surgicalHint = "Observe the anti-static vinyl floor reflections and illuminated monitor screens.",
+                            targetComponent = MedicalComponentType.OperatingTheatre,
+                            targetSubsystem = "Patient Vital Monitor",
+                            audioClipName = "monitor_ecg_beep",
+                            cameraOffset = new Vector3(1.5f, 1.5f, -2.4f)
+                        },
+                        new ClinicalStep
+                        {
+                            stepTitle = "Step 6.3: Surgical Completion & Residency Graduation",
+                            narrativeBriefing = "Surgical procedure executed with clinical precision! Anatomical closure complete, vital signs stable, and sterile dressing applied. Congratulations Doctor, you have graduated from the Residency Program!",
+                            clinicalObjective = "Residency complete. All 6 clinical modules mastered.",
+                            surgicalHint = "You can freely revisit any chapter or explore models in sandbox mode.",
+                            targetComponent = MedicalComponentType.FullAnatomy,
+                            targetSubsystem = "Visceral Overview",
+                            audioClipName = "ui_confirm",
+                            cameraOffset = new Vector3(0.12f, 0.4f, -2.2f)
+                        }
+                    }
                 }
             };
         }
 
-        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        // =========================================================================
+        // STEP ADVANCEMENT & NOTIFICATION
+        // =========================================================================
+        public void ApplyStep(int actIdx, int stepIdx)
         {
-            DetectCurrentSceneLevel();
-            BuildHUDOverlay();
-            ShowMissionBriefing(currentLevelIndex);
+            if (acts == null || actIdx < 0 || actIdx >= acts.Count) return;
+            var act = acts[actIdx];
+            if (act.steps == null || stepIdx < 0 || stepIdx >= act.steps.Count) return;
+
+            currentActIndex = actIdx;
+            currentStepIndex = stepIdx;
+
+            NotifyUIOfCurrentStep();
         }
 
-        private void DetectCurrentSceneLevel()
+        public void AdvanceStep()
         {
-            string currentScene = SceneManager.GetActiveScene().name;
-            for (int i = 0; i < levels.Count; i++)
+            if (acts == null || acts.Count == 0) return;
+            var currentAct = acts[currentActIndex];
+
+            if (currentStepIndex + 1 < currentAct.steps.Count)
             {
-                if (levels[i].sceneName == currentScene)
+                ApplyStep(currentActIndex, currentStepIndex + 1);
+            }
+            else if (currentActIndex + 1 < acts.Count)
+            {
+                ApplyStep(currentActIndex + 1, 0);
+            }
+            else
+            {
+                ApplyStep(0, 0);
+            }
+        }
+
+        public void NextStep() => AdvanceStep();
+
+        public void PreviousStep()
+        {
+            if (acts == null || acts.Count == 0) return;
+
+            if (currentStepIndex > 0)
+            {
+                ApplyStep(currentActIndex, currentStepIndex - 1);
+            }
+            else if (currentActIndex > 0)
+            {
+                int prevAct = currentActIndex - 1;
+                int lastStep = acts[prevAct].steps.Count - 1;
+                ApplyStep(prevAct, lastStep);
+            }
+        }
+
+        public StoryAct GetCurrentAct()
+        {
+            if (acts != null && currentActIndex >= 0 && currentActIndex < acts.Count)
+                return acts[currentActIndex];
+            return null;
+        }
+
+        public ClinicalStep GetCurrentStep()
+        {
+            var act = GetCurrentAct();
+            if (act != null && act.steps != null && currentStepIndex >= 0 && currentStepIndex < act.steps.Count)
+                return act.steps[currentStepIndex];
+            return null;
+        }
+
+        public int GetTotalActsCount() => acts != null ? acts.Count : 0;
+
+        private void NotifyUIOfCurrentStep()
+        {
+            var workstation = MedicalWorkstationUIController.Instance ?? FindFirstObjectByType<MedicalWorkstationUIController>();
+            if (workstation != null)
+            {
+                var act = GetCurrentAct();
+                var step = GetCurrentStep();
+                if (act != null && step != null)
                 {
-                    currentLevelIndex = i;
-                    return;
+                    workstation.OnStoryStepChanged(act, step, currentActIndex, currentStepIndex, acts.Count);
                 }
             }
-        }
-
-        private void BuildHUDOverlay()
-        {
-            // Create Screen Overlay Canvas for Story HUD
-            var canvasGo = new GameObject("LevelStory_HUD_Canvas");
-            canvasGo.transform.SetParent(transform, false);
-
-            storyCanvas = canvasGo.AddComponent<Canvas>();
-            storyCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
-            storyCanvas.sortingOrder = 80;
-
-            var scaler = canvasGo.AddComponent<CanvasScaler>();
-            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-            scaler.referenceResolution = new Vector2(1920, 1080);
-            scaler.matchWidthOrHeight = 0.5f;
-
-            canvasGo.AddComponent<GraphicRaycaster>();
-
-            // Floating Top Banner: Mission Badge
-            var bannerGo = CreateUIElement("MissionBadge", canvasGo.transform, new Vector2(0f, 1f), new Vector2(0f, 1f), new Vector2(0f, 1f), new Vector2(25, -20), new Vector2(360, 48));
-            var bannerImg = bannerGo.AddComponent<Image>();
-            bannerImg.color = new Color(0.04f, 0.12f, 0.22f, 0.95f);
-            var bannerBtn = bannerGo.AddComponent<Button>();
-            bannerBtn.onClick.AddListener(() => ToggleBriefing());
-
-            var bannerTextGo = CreateUIElement("Text", bannerGo.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
-            var bannerTmp = bannerTextGo.AddComponent<TextMeshProUGUI>();
-            string currentName = (levels != null && currentLevelIndex < levels.Count) ? levels[currentLevelIndex].levelName : "Clinical Simulation Mode";
-            bannerTmp.text = $"<color=#00E5FF><b>MISSION BRIEFING:</b></color> <size=85%>{currentName}</size>";
-            bannerTmp.fontSize = 13;
-            bannerTmp.alignment = TextAlignmentOptions.Center;
-            bannerTmp.color = Color.white;
-
-            // Mission Briefing Dialog Window (Center Modal)
-            briefingPanel = CreateUIElement("MissionBriefingDialog", canvasGo.transform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(620, 380));
-            var diagImg = briefingPanel.AddComponent<Image>();
-            diagImg.color = new Color(0.03f, 0.07f, 0.13f, 0.98f);
-
-            // Dialog Header
-            var dHeader = CreateUIElement("Header", briefingPanel.transform, new Vector2(0f, 1f), new Vector2(1f, 1f), new Vector2(0.5f, 1f), new Vector2(0, -25), new Vector2(0, 50));
-            dHeader.AddComponent<Image>().color = new Color(0.06f, 0.14f, 0.25f, 1.0f);
-
-            var titleGo = CreateUIElement("TitleText", dHeader.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), new Vector2(16, 0), new Vector2(-32, 0));
-            levelTitleText = titleGo.AddComponent<TextMeshProUGUI>();
-            levelTitleText.fontSize = 17;
-            levelTitleText.fontStyle = FontStyles.Bold;
-            levelTitleText.color = new Color(0.0f, 0.9f, 1.0f);
-            levelTitleText.alignment = TextAlignmentOptions.Left;
-
-            // Dialog Content Layout
-            var contentArea = CreateUIElement("ContentArea", briefingPanel.transform, new Vector2(0f, 0f), new Vector2(1f, 1f), new Vector2(0.5f, 0.5f), new Vector2(0, 10), new Vector2(-40, -110));
-            var vlg = contentArea.AddComponent<VerticalLayoutGroup>();
-            vlg.spacing = 12;
-            vlg.childControlWidth = true;
-            vlg.childControlHeight = false;
-
-            // Briefing Text
-            var bTextGo = CreateUIElement("BriefingText", contentArea.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(0, 80));
-            briefingBodyText = bTextGo.AddComponent<TextMeshProUGUI>();
-            briefingBodyText.fontSize = 13;
-            briefingBodyText.color = new Color(0.85f, 0.92f, 0.98f);
-
-            // Objective Box
-            var objBox = CreateUIElement("ObjectiveBox", contentArea.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(0, 55));
-            objBox.AddComponent<Image>().color = new Color(0.06f, 0.18f, 0.25f, 0.9f);
-            var objTextGo = CreateUIElement("ObjText", objBox.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), new Vector2(10, 0), new Vector2(-20, 0));
-            objectiveText = objTextGo.AddComponent<TextMeshProUGUI>();
-            objectiveText.fontSize = 12;
-            objectiveText.color = new Color(0.2f, 1.0f, 0.6f);
-
-            // Hint Text
-            var hintBox = CreateUIElement("HintBox", contentArea.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(0, 36));
-            hintBox.AddComponent<Image>().color = new Color(0.12f, 0.16f, 0.20f, 0.8f);
-            var hTextGo = CreateUIElement("HText", hintBox.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), new Vector2(10, 0), new Vector2(-20, 0));
-            hintText = hTextGo.AddComponent<TextMeshProUGUI>();
-            hintText.fontSize = 11;
-            hintText.color = new Color(1.0f, 0.85f, 0.4f);
-
-            // Button Bar (Bottom)
-            var btnBar = CreateUIElement("ButtonBar", briefingPanel.transform, new Vector2(0f, 0f), new Vector2(1f, 0f), new Vector2(0.5f, 0f), new Vector2(0, 25), new Vector2(-40, 44));
-            var hlg = btnBar.AddComponent<HorizontalLayoutGroup>();
-            hlg.spacing = 14;
-            hlg.childControlWidth = true;
-            hlg.childForceExpandWidth = true;
-
-            // Start Mission Button
-            var startBtnGo = CreateUIElement("StartBtn", btnBar.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
-            startBtnGo.AddComponent<Image>().color = new Color(0.0f, 0.75f, 0.9f);
-            var startBtn = startBtnGo.AddComponent<Button>();
-            startBtn.onClick.AddListener(() => briefingPanel.SetActive(false));
-            var sTxt = CreateUIElement("Txt", startBtnGo.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero).AddComponent<TextMeshProUGUI>();
-            sTxt.text = "<b>BEGIN OPERATION</b>";
-            sTxt.fontSize = 13;
-            sTxt.alignment = TextAlignmentOptions.Center;
-            sTxt.color = new Color(0.02f, 0.05f, 0.1f);
-
-            // Next Level Button
-            var nextBtnGo = CreateUIElement("NextBtn", btnBar.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
-            nextBtnGo.AddComponent<Image>().color = new Color(0.12f, 0.28f, 0.40f);
-            advanceButton = nextBtnGo.AddComponent<Button>();
-            advanceButton.onClick.AddListener(AdvanceToNextLevel);
-            var nTxt = CreateUIElement("Txt", nextBtnGo.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero).AddComponent<TextMeshProUGUI>();
-            nTxt.text = "<b>NEXT MISSION -></b>";
-            nTxt.fontSize = 13;
-            nTxt.alignment = TextAlignmentOptions.Center;
-            nTxt.color = Color.white;
-
-            // Main Menu Button
-            var menuBtnGo = CreateUIElement("MenuBtn", btnBar.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
-            menuBtnGo.AddComponent<Image>().color = new Color(0.18f, 0.12f, 0.15f);
-            var menuBtn = menuBtnGo.AddComponent<Button>();
-            menuBtn.onClick.AddListener(() => SceneManager.LoadScene("1"));
-            var mTxt = CreateUIElement("Txt", menuBtnGo.transform, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero).AddComponent<TextMeshProUGUI>();
-            mTxt.text = "<b>HQ / MENU</b>";
-            mTxt.fontSize = 13;
-            mTxt.alignment = TextAlignmentOptions.Center;
-            mTxt.color = new Color(1.0f, 0.7f, 0.7f);
-        }
-
-        public void ShowMissionBriefing(int levelIndex)
-        {
-            if (levels == null || levelIndex < 0 || levelIndex >= levels.Count) return;
-            var level = levels[levelIndex];
-
-            if (levelTitleText != null) levelTitleText.text = $"MISSION {level.levelNumber}: {level.levelName.ToUpper()}";
-            if (briefingBodyText != null) briefingBodyText.text = level.briefing;
-            if (objectiveText != null) objectiveText.text = $"<b>PRIMARY OBJECTIVE:</b> {level.primaryObjective}";
-            if (hintText != null) hintText.text = $"<b>TACTICAL HINT:</b> {level.hint}";
-
-            if (briefingPanel != null) briefingPanel.SetActive(true);
-        }
-
-        public void ToggleBriefing()
-        {
-            if (briefingPanel != null)
-            {
-                briefingPanel.SetActive(!briefingPanel.activeSelf);
-            }
-        }
-
-        public void AdvanceToNextLevel()
-        {
-            int nextIndex = (currentLevelIndex + 1) % levels.Count;
-            currentLevelIndex = nextIndex;
-            string targetScene = levels[nextIndex].sceneName;
-            Debug.Log($"[LevelStoryController] Advancing to Story Level {nextIndex + 1}: {targetScene}");
-            SceneManager.LoadScene(targetScene);
-        }
-
-        private GameObject CreateUIElement(string name, Transform parent, Vector2 anchorMin, Vector2 anchorMax, Vector2 pivot, Vector2 anchoredPos, Vector2 sizeDelta)
-        {
-            var go = new GameObject(name);
-            go.transform.SetParent(parent, false);
-            var rt = go.AddComponent<RectTransform>();
-            rt.anchorMin = anchorMin;
-            rt.anchorMax = anchorMax;
-            rt.pivot = pivot;
-            rt.anchoredPosition = anchoredPos;
-            rt.sizeDelta = sizeDelta;
-            return go;
         }
     }
 }

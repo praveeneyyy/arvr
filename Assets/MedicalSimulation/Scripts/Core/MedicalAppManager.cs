@@ -13,17 +13,22 @@ namespace MedicalSimulation.Core
         public static MedicalAppManager Instance { get; private set; }
 
         [Header("Scene Indices (must match Build Settings order)")]
-        [SerializeField] private int mainMenuSceneIndex = 0;
-        [SerializeField] private int anatomyLabSceneIndex = 1;
-        [SerializeField] private int procedureLabSceneIndex = 2;
-        [SerializeField] private int diagnosisLabSceneIndex = 3;
-        [SerializeField] private int finalAssessmentSceneIndex = 4;
-        [SerializeField] private int heartSceneIndex = 5;
-        [SerializeField] private int bloodflowSceneIndex = 6;
-        [SerializeField] private int teethSceneIndex = 7;
-        [SerializeField] private int liverCutSceneIndex = 8;
-        [SerializeField] private int liverGrabSceneIndex = 9;
-        [SerializeField] private int nasalSceneIndex = 10;
+        [SerializeField] private int bootstrapSceneIndex = 0;
+        [SerializeField] private int mainMenuSceneIndex = 1;
+        [SerializeField] private int storyIntroSceneIndex = 2;
+        [SerializeField] private int dentalClinicSceneIndex = 3;
+        [SerializeField] private int anatomyLabSceneIndex = 4;
+        [SerializeField] private int diagnosisLabSceneIndex = 5;
+        [SerializeField] private int procedureLabSceneIndex = 6;
+        [SerializeField] private int finalAssessmentSceneIndex = 7;
+        [SerializeField] private int operatingTheatreSceneIndex = 8;
+        [SerializeField] private int legacyMenuSceneIndex = 9;
+        [SerializeField] private int heartSceneIndex = 10;
+        [SerializeField] private int bloodflowSceneIndex = 11;
+        [SerializeField] private int teethSceneIndex = 12;
+        [SerializeField] private int liverCutSceneIndex = 13;
+        [SerializeField] private int liverGrabSceneIndex = 14;
+        [SerializeField] private int nasalSceneIndex = 15;
 
         // ── Progress tracking ────────────────────────────────────────────────
         public int ModulesCompleted    { get; private set; }
@@ -56,11 +61,15 @@ namespace MedicalSimulation.Core
 
         // ── Scene navigation ─────────────────────────────────────────────────
 
+        public void GoToBootstrap()         => LoadScene(bootstrapSceneIndex);
         public void GoToMainMenu()          => LoadScene(mainMenuSceneIndex);
+        public void GoToStoryIntro()        => LoadScene(storyIntroSceneIndex);
+        public void GoToDentalClinic()      => LoadScene(dentalClinicSceneIndex);
         public void GoToAnatomyLab()        => LoadScene(anatomyLabSceneIndex);
-        public void GoToProcedureLab()      => LoadScene(procedureLabSceneIndex);
         public void GoToDiagnosisLab()      => LoadScene(diagnosisLabSceneIndex);
+        public void GoToProcedureLab()      => LoadScene(procedureLabSceneIndex);
         public void GoToFinalAssessment()   => LoadScene(finalAssessmentSceneIndex);
+        public void GoToOperatingTheatre()  => LoadScene(operatingTheatreSceneIndex);
         public void GoToHeartScene()        => LoadScene(heartSceneIndex);
         public void GoToBloodflowScene()    => LoadScene(bloodflowSceneIndex);
         public void GoToTeethScene()        => LoadScene(teethSceneIndex);

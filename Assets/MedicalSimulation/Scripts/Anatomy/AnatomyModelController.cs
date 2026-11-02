@@ -134,6 +134,7 @@ namespace MedicalSimulation.Anatomy
 
         public void IsolateSelectedOrgan()  => IsolateOrgan(_selectedOrgan);
         public void RestoreFromIsolation()  => ShowAllSystems();
+        public void RestoreAll()            => ShowAllSystems();
 
         // ── Transparency ──────────────────────────────────────────────────────
 
@@ -147,6 +148,14 @@ namespace MedicalSimulation.Anatomy
             {
                 if (o != _selectedOrgan)
                     o.SetTransparency(alpha);
+            }
+        }
+
+        public void SetAllTransparency(float alpha)
+        {
+            foreach (var o in _allOrgans)
+            {
+                o.SetTransparency(alpha);
             }
         }
 

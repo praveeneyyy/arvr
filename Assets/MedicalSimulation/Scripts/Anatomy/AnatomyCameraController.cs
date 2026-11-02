@@ -30,8 +30,8 @@ namespace MedicalSimulation.Anatomy
 
         // Default transform values (used for Reset)
         private float   _yaw   = 0f;
-        private float   _pitch = 20f;
-        private float   _dist  = 3f;
+        private float   _pitch = 10f;
+        private float   _dist  = 2.2f;
         private Vector3 _panOffset = Vector3.zero;
 
         private float   _targetYaw;
@@ -49,12 +49,26 @@ namespace MedicalSimulation.Anatomy
         void Awake()
         {
             if (cam  == null) cam  = GetComponentInChildren<Camera>();
-            if (pivot == null) pivot = transform;
+            EnsureOrbitPivot();
 
             _targetYaw       = _yaw;
             _targetPitch     = _pitch;
             _targetDist      = _dist;
             _targetPanOffset = _panOffset;
+        }
+
+        private void EnsureOrbitPivot()
+        {
+            if (pivot == null || pivot == transform)
+            {
+                var existingPivot = GameObject.Find("Camera_Orbit_Pivot");
+                if (existingPivot == null)
+                {
+                    existingPivot = new GameObject("Camera_Orbit_Pivot");
+                    existingPivot.transform.position = new Vector3(0.12f, 0.35f, 0f);
+                }
+                pivot = existingPivot.transform;
+            }
         }
 
         void Update()
@@ -65,13 +79,31 @@ namespace MedicalSimulation.Anatomy
 
         private void HandleMouseInput()
         {
-            // Right-drag → orbit
-            if (Input.GetMouseButtonDown(1)) { _isDragging = true; _lastMousePos = Input.mousePosition; }
-            if (Input.GetMouseButtonUp(1))     _isDragging = false;
+            bool isOverUI = UnityEngine.EventSystems.EventSystem.current != null && 
+                            UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject();
 
-            // Middle-drag → pan
-            if (Input.GetMouseButtonDown(2)) { _isPanning = true; _lastMousePos = Input.mousePosition; }
-            if (Input.GetMouseButtonUp(2))     _isPanning = false;
+            // Left-drag (when not over UI) OR Right-drag -> Orbit
+            if ((Input.GetMouseButtonDown(0) && !isOverUI) || Input.GetMouseButtonDown(1)) 
+            { 
+                _isDragging = true; 
+                _lastMousePos = Input.mousePosition; 
+            }
+            if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))     
+            {
+                _isDragging = false;
+            }
+
+            // Middle-drag OR Shift+Right-drag -> Pan
+            bool isPanKey = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+            if (Input.GetMouseButtonDown(2) || (Input.GetMouseButtonDown(1) && isPanKey)) 
+            { 
+                _isPanning = true; 
+                _lastMousePos = Input.mousePosition; 
+            }
+            if (Input.GetMouseButtonUp(2) || (Input.GetMouseButtonUp(1) && _isPanning)) 
+            {
+                _isPanning = false;
+            }
 
             if (_isDragging)
             {
@@ -93,7 +125,16 @@ namespace MedicalSimulation.Anatomy
 
             // Scroll → zoom
             float scroll = Input.GetAxis("Mouse ScrollWheel");
-            _targetDist = Mathf.Clamp(_targetDist - scroll * zoomSpeed, minDistance, maxDistance);
+            if (Mathf.Abs(scroll) > 0.001f && !isOverUI)
+            {
+                _targetDist = Mathf.Clamp(_targetDist - scroll * zoomSpeed, minDistance, maxDistance);
+            }
+
+            // Key 'R' -> Reset View
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                ResetView();
+            }
         }
 
         private void SmoothApply()
@@ -122,8 +163,8 @@ namespace MedicalSimulation.Anatomy
         public void ResetView()
         {
             _targetYaw       = 0f;
-            _targetPitch     = 20f;
-            _targetDist      = 3f;
+            _targetPitch     = 10f;
+            _targetDist      = 2.2f;
             _targetPanOffset = Vector3.zero;
         }
 

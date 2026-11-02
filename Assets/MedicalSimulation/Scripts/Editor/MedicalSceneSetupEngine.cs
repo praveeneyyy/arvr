@@ -17,6 +17,21 @@ namespace MedicalSimulation.Core
     public static class MedicalSceneSetupEngine
     {
 #if UNITY_EDITOR
+        [MenuItem("MedicalSimulation/Rebuild Master Clinical Workstation in Active Scene", false, 1)]
+        public static void RebuildMasterClinicalWorkstation()
+        {
+            var existing = Object.FindFirstObjectByType<UI.MedicalWorkstationUIController>();
+            if (existing == null)
+            {
+                var workstationGo = new GameObject("MedicalWorkstation_MasterController");
+                existing = workstationGo.AddComponent<UI.MedicalWorkstationUIController>();
+                Undo.RegisterCreatedObjectUndo(workstationGo, "Create Master Clinical Workstation");
+            }
+            existing.InitializeWorkstation();
+            EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
+            Debug.Log("<color=#00E5FF>[MedicalSceneSetupEngine] Master Clinical Workstation successfully initialized in active scene!</color>");
+        }
+
         [MenuItem("MedicalSimulation/Add AI Assistant to Active Scene")]
         public static void AddAIAssistantToActiveScene()
         {

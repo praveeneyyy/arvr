@@ -119,8 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1660057539 &9223372036854775807
---- !u!1 &1000000001
+--- !u!1 &76599421
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,8 +127,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1000000002}
-  - component: {fileID: 1000000003}
+  - component: {fileID: 76599425}
+  - component: {fileID: 76599424}
+  - component: {fileID: 76599423}
+  - component: {fileID: 76599422}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -137,32 +138,47 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1000000002
-Transform:
+--- !u!114 &76599422
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000000001}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2, z: -2.0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &1000000003
+  m_GameObject: {fileID: 76599421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c6c5f2a6e34a3cb6d059dfa7732a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MedicalSimulation::MedicalSimulation.Anatomy.AnatomyCameraController
+  pivot: {fileID: 0}
+  cam: {fileID: 0}
+  orbitSpeed: 200
+  minPitch: -80
+  maxPitch: 80
+  zoomSpeed: 5
+  minDistance: 0.3
+  maxDistance: 8
+  panSpeed: 0.3
+  smoothTime: 0.12
+--- !u!81 &76599423
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76599421}
+  m_Enabled: 1
+--- !u!20 &76599424
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000000001}
+  m_GameObject: {fileID: 76599421}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.063, g: 0.078, b: 0.098, a: 1.0}
+  m_BackGroundColor: {r: 0.02, g: 0.05, b: 0.09, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -183,8 +199,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 100
+  near clip plane: 0.3
+  far clip plane: 1000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -198,13 +214,27 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_enableGpuInstrumentation: 0
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-
---- !u!1 &1000000010
+--- !u!4 &76599425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76599421}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.055300385, y: 0, z: 0, w: 0.99846977}
+  m_LocalPosition: {x: 0, y: 0.4, z: -1.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &102130275
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,8 +242,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1000000011}
-  - component: {fileID: 1000000012}
+  - component: {fileID: 102130277}
+  - component: {fileID: 102130276}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -221,33 +251,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1000000011
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000000010}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!108 &1000000012
+--- !u!108 &102130276
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000000010}
+  m_GameObject: {fileID: 102130275}
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 1, g: 0.98, b: 0.95, a: 1}
-  m_Intensity: 1.5
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -301,80 +316,22 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
-
---- !u!1 &1000000020
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1000000021}
-  - component: {fileID: 1000000022}
-  - component: {fileID: 1000000023}
-  - component: {fileID: 1000000024}  - component: {fileID: 1000000025}
-
-  m_Layer: 0
-  m_Name: AnatomySimulationMaster
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1000000021
+--- !u!4 &102130277
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000000020}
+  m_GameObject: {fileID: 102130275}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1000000022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000000020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb1a998b24643bb860e5a9fd774397f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1000000023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000000020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de2f86a58a5b43108d0f25fbb1a5b34e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1000000024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000000020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 922bc968c94943dcba3c586111be1601, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-
---- !u!1 &1000000030
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &281854427
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -382,24 +339,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1000000031}
-  - component: {fileID: 1000000032}
-  - component: {fileID: 1000000033}
-  - component: {fileID: 1000000034}
+  - component: {fileID: 281854429}
+  - component: {fileID: 281854428}
   m_Layer: 0
-  m_Name: Clinical_AI_Assistant
+  m_Name: SceneBootstrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1000000031
+--- !u!114 &281854428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281854427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7522507d58744d01ba06c42bbb48df24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MedicalSimulation::MedicalSimulation.Core.SceneBootstrap
+  sceneName: Scene
+  applyQualityOnStart: 1
+--- !u!4 &281854429
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000000030}
+  m_GameObject: {fileID: 281854427}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -408,80 +377,111 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1000000032
+--- !u!1 &498243788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498243792}
+  - component: {fileID: 498243791}
+  - component: {fileID: 498243790}
+  - component: {fileID: 498243789}
+  m_Layer: 0
+  m_Name: MedicalAI_Assistant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &498243789
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000000030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc26e306d81142e6b99409206ca05cf2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1000000033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000000030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d390e59a3b0a4ae2af3fe1e3cfd434fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1000000034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000000030}
+  m_GameObject: {fileID: 498243788}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9204d02d98d49f7938e7c761a766db2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-
---- !u!1001 &1000000040
-PrefabInstance:
+  m_EditorClassIdentifier: MedicalSimulation::MedicalSimulation.UI.MedicalAIChatController
+  toggleChatKey: 99
+  secondaryToggleKey: 96
+  chatUI: {fileID: 0}
+--- !u!114 &498243790
+MonoBehaviour:
   m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498243788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d390e59a3b0a4ae2af3fe1e3cfd434fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MedicalSimulation::MedicalSimulation.UI.MedicalAIChatUI
+  chatPanel: {fileID: 0}
+  messageContainer: {fileID: 0}
+  scrollRect: {fileID: 0}
+  inputField: {fileID: 0}
+  sendButton: {fileID: 0}
+  stopButton: {fileID: 0}
+  clearButton: {fileID: 0}
+  copyLastButton: {fileID: 0}
+  retryButton: {fileID: 0}
+  micButton: {fileID: 0}
+  ttsToggleButton: {fileID: 0}
+  closeButton: {fileID: 0}
+  statusText: {fileID: 0}
+  statusIndicatorDot: {fileID: 0}
+  activeContextPillText: {fileID: 0}
+  loadingSpinner: {fileID: 0}
+  micLevelText: {fileID: 0}
+  chipsContainer: {fileID: 0}
+--- !u!114 &498243791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498243788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc26e306d81142e6b99409206ca05cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MedicalSimulation::MedicalSimulation.AI.MedicalAIOrchestrator
+  configuration: {fileID: 0}
+  voiceInput: {fileID: 0}
+  speechOutput: {fileID: 0}
+  liveContext:
+    activeSceneName: 
+    selectedOrgan: {fileID: 0}
+    currentProcedureName: 
+    currentProcedureStep: 
+    simulatedHeartRate: 72
+    simulatedRespirationRate: 16
+    simulatedBloodPressureSystolic: 120
+    simulatedBloodPressureDiastolic: 80
+    isVREnabled: 0
+--- !u!4 &498243792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498243788}
   serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2000000000000001, guid: b03b800126aa46cc8701b3f492d3ea64, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000000000000001, guid: b03b800126aa46cc8701b3f492d3ea64, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000000000000001, guid: b03b800126aa46cc8701b3f492d3ea64, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: b03b800126aa46cc8701b3f492d3ea64, type: 3}
-
---- !u!1660057539 &9223372036854775807
-SceneRoots:
-  m_ObjectHideFlags: 0
-  m_Roots:
-  - {fileID: 1000000002}
-  - {fileID: 1000000011}
-  - {fileID: 1000000021}
-  - {fileID: 1000000031}
-  - {fileID: 1000000040}
-
---- !u!1 &2148000001
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &818609528
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -489,122 +489,263 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2148000002}
-  - component: {fileID: 2148000003}
-  - component: {fileID: 2148000004}
-  - component: {fileID: 2148000005}
-  - component: {fileID: 2148000006}
-  m_Layer: 5
-  m_Name: MedicalWorkstation_Master
+  - component: {fileID: 818609530}
+  - component: {fileID: 818609529}
+  m_Layer: 0
+  m_Name: MedicalAudioController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2148000002
-RectTransform:
+--- !u!114 &818609529
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2148000001}
+  m_GameObject: {fileID: 818609528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17cfaffc0fa401587b675f624ba19c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MedicalSimulation::MedicalSimulation.Audio.MedicalAudioController
+  mixer: {fileID: 0}
+  physiologicalSource: {fileID: 0}
+  respirationSource: {fileID: 0}
+  procedureSource: {fileID: 0}
+  uiSource: {fileID: 0}
+  ambientSource: {fileID: 0}
+  heartbeatClip: {fileID: 0}
+  inhaleClip: {fileID: 0}
+  exhaleClip: {fileID: 0}
+  drillClip: {fileID: 0}
+  suctionClip: {fileID: 0}
+  scalerClip: {fileID: 0}
+  instrumentPlaceClip: {fileID: 0}
+  procedureCompleteClip: {fileID: 0}
+  selectClip: {fileID: 0}
+  buttonClickClip: {fileID: 0}
+  confirmClip: {fileID: 0}
+  errorClip: {fileID: 0}
+  labAmbienceClip: {fileID: 0}
+--- !u!4 &818609530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818609528}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!223 &2148000003
-Canvas:
+--- !u!1 &968324730
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2148000001}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 50
-  m_TargetDisplay: 0
---- !u!114 &2148000004
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 968324734}
+  - component: {fileID: 968324733}
+  - component: {fileID: 968324732}
+  - component: {fileID: 968324731}
+  m_Layer: 0
+  m_Name: AnatomyExplorer_Root
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &968324731
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2148000001}
+  m_GameObject: {fileID: 968324730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Script: {fileID: 11500000, guid: c71657fdf47b47b694116bbfdf9c8079, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!114 &2148000005
+  m_EditorClassIdentifier: MedicalSimulation::MedicalSimulation.Anatomy.AnatomicalSlicePlaneController
+  currentAxis: 0
+  slicePosition: 0
+  sliceThickness: 0.35
+  sliceIndicatorPlane: {fileID: 0}
+  showIndicatorPlane: 1
+  anatomyController: {fileID: 0}
+--- !u!114 &968324732
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2148000001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &2148000006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2148000001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71bc5489a20141f28b5e679204cd1190, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-
---- !u!114 &1000000025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000000020}
+  m_GameObject: {fileID: 968324730}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af8d41c9480e43ddb7d37c1b3c1481b8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: MedicalSimulation::MedicalSimulation.Anatomy.AnatomyAssemblyBuilder
+  modelContainer: {fileID: 0}
+  matHeart: {fileID: 0}
+  matLung: {fileID: 0}
+  matLiver: {fileID: 0}
+  matStomach: {fileID: 0}
+  matKidney: {fileID: 0}
+  matBone: {fileID: 0}
+  matArtery: {fileID: 0}
+  matVein: {fileID: 0}
+  matHologram: {fileID: 0}
+  buildOnStart: 1
+  globalScale: 1
+--- !u!114 &968324733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968324730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb1a998b24643bb860e5a9fd774397f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MedicalSimulation::MedicalSimulation.Anatomy.AnatomyModelController
+  anatomyRoot: {fileID: 0}
+  cameraController: {fileID: 0}
+  explodedScale: 1.4
+--- !u!4 &968324734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968324730}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1023380205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1023380207}
+  - component: {fileID: 1023380206}
+  m_Layer: 0
+  m_Name: MedicalDashboardRuntimeUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1023380206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023380205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0783d87cacbf48d3b119c99b8d59206b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MedicalSimulation::MedicalSimulation.UI.MedicalDashboardRuntimeUI
+  autoBuildIfMissing: 1
+  showPhysiologyControls: 1
+  showSystemFilters: 1
+--- !u!4 &1023380207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023380205}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1182671011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1182671013}
+  - component: {fileID: 1182671012}
+  m_Layer: 0
+  m_Name: MedicalAppManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1182671012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182671011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 873bd4b6bdaa4030b1a0b60ca3b8e42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MedicalSimulation::MedicalSimulation.Core.MedicalAppManager
+  mainMenuSceneIndex: 0
+  anatomyLabSceneIndex: 1
+  procedureLabSceneIndex: 2
+  diagnosisLabSceneIndex: 3
+  finalAssessmentSceneIndex: 4
+  heartSceneIndex: 5
+  bloodflowSceneIndex: 6
+  teethSceneIndex: 7
+  liverCutSceneIndex: 8
+  liverGrabSceneIndex: 9
+  nasalSceneIndex: 10
+--- !u!4 &1182671013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182671011}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 76599425}
+  - {fileID: 102130277}
+  - {fileID: 1182671013}
+  - {fileID: 818609530}
+  - {fileID: 968324734}
+  - {fileID: 1023380207}
+  - {fileID: 281854429}
+  - {fileID: 498243792}

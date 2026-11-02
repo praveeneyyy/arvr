@@ -2,6 +2,17 @@ using UnityEngine;
 
 namespace MedicalSimulation.UI
 {
+    public enum MedicalComponentType
+    {
+        FullAnatomy = 0,
+        Cardiology = 1,
+        Dental = 2,
+        SoftTissue = 3,
+        Diagnosis = 4,
+        Procedure = 5,
+        OperatingTheatre = 6
+    }
+
     /// <summary>
     /// Centralized clinical design system tokens for Medical Simulation AR/VR.
     /// Professional clinical workstation palette, typography scale, metrics, and interaction styles.

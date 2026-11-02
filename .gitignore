@@ -97,3 +97,9 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+
+# Project Atlas Local Backups and Cache
+Backups_ProjectAtlas_MainMenu/
+__pycache__/
+*.pyc
